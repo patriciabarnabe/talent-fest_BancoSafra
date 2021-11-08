@@ -1,13 +1,16 @@
-//import reactDom from 'react-dom';
-import { Switch, Route } from 'react-router-dom';
+import {
+  Routes,
+  Route  
+} from "react-router-dom";
 
-import  PageNotFound from '../pages/notfound'
+import Home from '../pages/Home/Home'
+import PageNotFound from '../pages/Notfound/Notfound'
 
-export const Routes = () => {
+export const Rotas = () => {
   return (
-    <Switch>
-      <Route component={() => <div>Page 404</div>} />   
-      <Route component={() => <div>Page 404</div>} />
-    </Switch>
+    <Routes>
+      <Route path='/home' element={<Home />} />
+      <Route path='*' element={<PageNotFound />} />
+    </Routes>
   )
 }
