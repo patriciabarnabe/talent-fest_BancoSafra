@@ -1,3 +1,5 @@
+import './Services/firebase';
+
 function App() {
   return (
     <>
