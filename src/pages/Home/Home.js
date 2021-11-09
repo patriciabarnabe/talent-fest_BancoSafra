@@ -19,13 +19,14 @@ function Home() {
   ];
 
   return (
-    <>
-      <div>
+    <div className="conteiner-home">
+      <section>
         <p> Não vacile, Trilhas em andamento </p>
 
         <Carousel slides={CarouselData} uniqueSlide={CarouselData} />
-      </div>
-      <div>
+      </section>
+
+      <section>
         <p> Não vacile, Trilhas em andamento </p>
 
         <div className="container">
@@ -37,15 +38,20 @@ function Home() {
             </div>
           </div>
         </div>
+      </section>
 
-        <p> Para prosperar, Recomendados para você </p>
+      <section>
+      <p> Para prosperar, Recomendados para você </p>
+      </section>
 
-        <p>
-          Você vai transformar o mundo ao seu redor, Descubra novos conteúdos.
-        </p>
-      </div>
+      <section>
+      <p>
+        Você vai transformar o mundo ao seu redor, Descubra novos conteúdos.
+      </p>
+      </section>
+
       <Navbar />
-    </>
+    </div>
   );
 }
 

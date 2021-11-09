@@ -1,0 +1,5 @@
+.conteiner-home {
+    max-height: 800px;   
+    width: 100%;
+    overflow: auto;
+}
