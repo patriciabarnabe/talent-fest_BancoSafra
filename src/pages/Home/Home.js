@@ -1,13 +1,12 @@
 import './home.scss'
-
 import Carousel from '../../components/Carousel/Carousel';
 import { CarouselData } from '../../components/Carousel/CarouselData';
 
 function Home() {
     return (
       <>
-        <header className="header-container">
-            <img src="" alt=""/>
+        <header className='header-container'>
+            <img src='' alt=''/>
             <div>
               <h1> Olá, Maria!</h1>
               <span>⭐⭐⭐⭐⭐</span>
