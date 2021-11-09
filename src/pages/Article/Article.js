@@ -1,5 +1,5 @@
 import React from 'react';
-import { getTrilha } from '../../Services';
+import { getTrilha } from '../../services';
 //  import { useEffect, useState} from "react";
 //  import Carousel from '../../components/Carousel/Carousel';
 //  import uniqueSlide from '../../components/Carousel/CarouselData'

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
-import './carousel.scss'
+import './carousel.css'
 
 const Carousel = ({ slides, uniqueSlide }) => {
   const [current, setCurrent] = useState(0);
