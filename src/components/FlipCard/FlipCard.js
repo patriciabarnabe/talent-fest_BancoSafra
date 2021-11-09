@@ -1,4 +1,6 @@
 import { useState } from "react";
+import React from 'react';
+
 import './flipcard.css';
  
 import cn from "classnames";

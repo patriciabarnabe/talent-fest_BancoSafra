@@ -1,3 +1,5 @@
+import React from 'react';
+
 import "./home.css";
 
 import Carousel from "../../components/Carousel/Carousel";
@@ -17,14 +19,11 @@ function Home() {
 
   return (
     <>
-      <header className="header-container">
-        <img src="" alt="" />
-        <div>
-          <h1> Olá, Maria!</h1>
-          <span>⭐⭐⭐⭐⭐</span>
-        </div>
-      </header>
+      <div>
+        <p> Não vacile, Trilhas em andamento </p>
 
+        <Carousel slides={CarouselData} uniqueSlide={CarouselData} />
+      </div>
       <div>
         <p> Não vacile, Trilhas em andamento </p>
 
@@ -39,8 +38,6 @@ function Home() {
         </div>
 
         <p> Para prosperar, Recomendados para você </p>
-
-        <Carousel slides={CarouselData} />
 
         <p>
           Você vai transformar o mundo ao seu redor, Descubra novos conteúdos.

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { CarouselData } from './CarouselData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 import './carousel.css'
 
-function Carousel({ slides }) {
+const Carousel = ({ slides, uniqueSlide }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -26,7 +25,7 @@ function Carousel({ slides }) {
         <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
         <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
 
-      {CarouselData.map((slide, index) => {
+      {uniqueSlide && uniqueSlide.map((slide, index) => {
         return (
           <div
             className={index === current ? 'slide active' : 'slide'}
