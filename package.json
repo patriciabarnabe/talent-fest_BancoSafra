@@ -11,7 +11,11 @@
     "firebase": "^9.3.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.2",
+<<<<<<< HEAD
     "react-dev-utils": "^0.3.0",
+=======
+    "react-dev-utils": "^11.0.4",
+>>>>>>> 01b1295e0a2121ae4edc232448ae839108faed2e
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.0.1",
