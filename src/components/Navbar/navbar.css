@@ -1,1 +1,20 @@
-@import  'bootstrap/dist/css/bootstrap.min.css'
+.navbar {
+    background: #F54868;
+    display: flex;
+    padding: 10px 20px;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fa-home, .fa-book-open, .fa-bookmark, .fa-user {
+    font-size: 25px;
+} 
+
+.link {
+    color: rgb(2, 2, 2);
+  }
+  .link:hover {
+     color: #FFF;
+  }
