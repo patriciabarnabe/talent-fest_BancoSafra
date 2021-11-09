@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import "./home.css";
 
@@ -8,15 +8,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FlipCard from "../../components/FlipCard/FlipCard";
 import Navbar from "../../components/Navbar/Navbar"
 
+import { ProgressBar } from "react-bootstrap";
+
 function Home() {
-  const cards = [
-    {
-      id: "2",
-      variant: "click",
-      front: "Click",
-      back: "Back",
-    },
-  ];
+  const percentage = 73;
 
   return (
     <>
@@ -31,14 +26,18 @@ function Home() {
         <div className="container">
           <div className="row h-100">
             <div class="col d-flex flex-column flex-md-row justify-content-around align-items-center">
-              {cards.map((card) => (
-                <FlipCard key={card.id} card={card} />
-              ))}
+              <FlipCard />
             </div>
           </div>
         </div>
 
         <p> Para prosperar, Recomendados para você </p>
+
+        <ProgressBar
+          now={percentage}
+          label={`${percentage}% `}
+          className="m-5"
+        />
 
         <p>
           Você vai transformar o mundo ao seu redor, Descubra novos conteúdos.
