@@ -5,6 +5,8 @@ import { db } from '../../services/firebase.js'
 //  import Carousel from '../../components/Carousel/Carousel';
 //  import uniqueSlide from '../../components/Carousel/CarouselData'
 
+import Navbar from "../../components/Navbar/Navbar"
+
 const Article = () => {
     const [trilha, setTrilha] = useState([])
     
@@ -44,6 +46,7 @@ const Article = () => {
                     </div>
                 )
             })}
+            <Navbar />            
         </div>
     )
 }

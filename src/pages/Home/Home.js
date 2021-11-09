@@ -6,6 +6,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import { CarouselData } from "../../components/Carousel/CarouselData";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FlipCard from "../../components/FlipCard/FlipCard";
+import Navbar from "../../components/Navbar/Navbar"
 
 import { ProgressBar } from "react-bootstrap";
 
@@ -42,6 +43,7 @@ function Home() {
           Você vai transformar o mundo ao seu redor, Descubra novos conteúdos.
         </p>
       </div>
+      <Navbar />
     </>
   );
 }
