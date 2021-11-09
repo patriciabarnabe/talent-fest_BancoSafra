@@ -1,4 +1,6 @@
-import './modal.scss'
+import React from 'react';
+
+import './modal.css'
 
 const Modal = ({ id = 'modal', onClose, children }) => {
 
