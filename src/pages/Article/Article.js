@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState, useEffect} from "react";
 import { collection, getDocs} from 'firebase/firestore'
-import { db } from '../../Services/firebase.js'
-//  import Carousel from '../../components/Carousel/Carousel';
-//  import uniqueSlide from '../../components/Carousel/CarouselData'
+import { db } from '../../services/firebase.js';
+import Carousel from '../../components/Carousel/Carousel.js';
+import UniqueCarouselArticle from '../../components/Carousel/UniqueCarouselArticle.js';
 
 const Article = () => {
     const [trilha, setTrilha] = useState([])
@@ -19,6 +19,8 @@ const Article = () => {
                  const obj = {
                     Titulo: doc.data().Titulo,
                     Autora: doc.data().Autora,
+                    conteudo: doc.data().conteudo,
+                    imagem: doc.data().imagem
                 };
                 newArray.push(obj);
             });
@@ -26,24 +28,33 @@ const Article = () => {
             setTrilha(newArray);
              
         })
-    // const retornoDafuncao = esperandoGetDocs.docs.forEach(doc => doc.data())
-    // console.log(retornoDafuncao)
-    // return retornoDafuncao
     }, [])
     
     return (
         
         <div>
             <h1>Oi</h1>
-            { trilha && trilha.map((article) => {
 
-                return (
-                    <div>
-                        <div>{article.Titulo}</div>
-                        <div>{article.Autora}</div>
-                    </div>
-                )
-            })}
+        <Carousel
+           slides = {<UniqueCarouselArticle stateCollection={trilha} slide={trilha.conteudo} />} 
+           uniqueSlide={trilha}
+        />
+            {/* { trilha && trilha.map((article, index) => {
+                console.log(article.imagem)
+                    return (
+                    <div key={index}>
+                        <div>
+                            <div>{article.Titulo}</div>
+                            <div>{article.Autora}</div>
+                            <img src={article.imagem}/>
+                            <section>
+                                {article.conteudo[0] }
+                            </section>
+                        </div>
+                    </div> */}
+                    {/* ) */}
+                
+            )
         </div>
     )
 }
