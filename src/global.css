@@ -22,7 +22,7 @@ body {
 }
 
 @font-face {
-    font-family: "Consolas";
+    font-family: 'Consolas';
     src: local(Consolas), url(./assets/consolas.ttf);
   }
 

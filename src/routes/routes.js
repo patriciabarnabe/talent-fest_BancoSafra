@@ -3,11 +3,11 @@ import React from 'react';
 import {
   Routes,
   Route  
-} from "react-router-dom";
-import Article from "../pages/Article/Article";
+} from 'react-router-dom';
+import Article from '../pages/Article/Article';
 import Home from '../pages/Home/Home'
 import NotFound from '../pages/Notfound/Notfound'
-import Login from "../pages/Login/Login";
+import Login from '../pages/Login/Login';
 
 export const Rotas = () => {
   return (
