@@ -1,13 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Article from './pages/Article/Article.js';
-// import Home from './pages/Home/Home';
+import { BrowserRouter } from 'react-router-dom'
+import { Rotas } from '../src/routes/routes'
 
-ReactDOM.render(
+ReactDOM.render( 
   <React.StrictMode>
-    <Article />
+    <BrowserRouter>
+      <Rotas />  
+    </BrowserRouter>
   </React.StrictMode>,
+
   document.getElementById('root')
 );
+
+
+
+
+
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import App from './App';
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 

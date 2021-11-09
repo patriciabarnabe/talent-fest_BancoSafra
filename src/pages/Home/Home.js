@@ -1,17 +1,16 @@
-// import react from 'react';
-// import './home.scss'
+import react from 'react';
+import './home.scss'
 
-// function Home() {
-//     return (
-//       <div className="header">
-//           <img src="" alt=""/>
-//           <div>
-//             <h1> Olá, Maria!</h1>
-//             <span>⭐⭐⭐⭐⭐</span>
-//           </div>
-//       </div>
-//     );
-// }
-  
-// export default Home;
-  
+function Home() {
+  return (
+    <div className="header">
+      <img src="" alt="" />
+      <div>
+        <h1> Olá, Maria!</h1>
+        <span>⭐⭐⭐⭐⭐</span>
+      </div>
+    </div>
+  );
+}
+
+export default Home;
