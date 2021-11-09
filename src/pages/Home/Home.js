@@ -1,5 +1,5 @@
+import react from 'react';
 import './home.scss'
-
 import Carousel from '../../components/Carousel/Carousel';
 import { CarouselData } from '../../components/Carousel/CarouselData';
 
@@ -17,11 +17,17 @@ function Home() {
         <div>
           <p> Não vacile, Trilhas em andamento </p>
           
-            <Carousel slides={CarouselData}/>
+            <Carousel 
+            slides={CarouselData}
+            uniqueSlide={CarouselData}
+            />
 
           <p> Para prosperar, Recomendados para você </p>
 
-            <Carousel slides={CarouselData}/>
+            <Carousel 
+            slides={CarouselData}
+            uniqueSlide={CarouselData}
+            />
             
           <p> Você vai transformar o mundo ao seu redor, Descubra novos conteúdos </p>
         </div>
