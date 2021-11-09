@@ -2,8 +2,9 @@ import React from 'react';
 import { useState, useEffect} from "react";
 import { collection, getDocs} from 'firebase/firestore'
 import { db } from '../../services/firebase.js';
-import Carousel from '../../components/Carousel/Carousel.js';
-import UniqueCarouselArticle from '../../components/Carousel/UniqueCarouselArticle.js';
+// import Carousel from '../../components/Carousel/Carousel.js';
+// import UniqueCarouselArticle from '../../components/Carousel/UniqueCarouselArticle.js';
+import Navbar from "../../components/Navbar/Navbar"
 
 const Article = () => {
     const [trilha, setTrilha] = useState([])
@@ -35,26 +36,25 @@ const Article = () => {
         <div>
             <h1>Oi</h1>
 
-        <Carousel
+        {/* <Carousel
            slides = {<UniqueCarouselArticle stateCollection={trilha} slide={trilha.conteudo} />} 
            uniqueSlide={trilha}
-        />
-            {/* { trilha && trilha.map((article, index) => {
+        /> */}
+            { trilha && trilha.map((article, index) => {
                 console.log(article.imagem)
-                    return (
+                return (
                     <div key={index}>
                         <div>
                             <div>{article.Titulo}</div>
                             <div>{article.Autora}</div>
-                            <img src={article.imagem}/>
                             <section>
                                 {article.conteudo[0] }
                             </section>
                         </div>
-                    </div> */}
-                    {/* ) */}
-                
-            )
+                    </div> 
+                )
+            })}        
+            <Navbar />            
         </div>
     )
 }
