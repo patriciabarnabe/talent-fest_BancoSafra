@@ -26,6 +26,10 @@ const Carousel = () => {
     console.log(articles)
   }, [articles])
 
+  function clicou() {
+    console.log('clicou')
+  }
+
  
   const carousel = useRef(null)
 
@@ -46,9 +50,11 @@ const Carousel = () => {
         onClick={handleLeftClick}
       />
       <div className='carousel' ref={carousel}>
-        {articles?.map((card, index) => {
+        {articles != [] && articles?.map((card, index) => {
           return (
-            <Card key={index} article={card} />
+            <Card key={index} trilha={card} 
+            cardClicked={clicou}
+            />
           )
         })}
       </div>
