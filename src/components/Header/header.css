@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-.header-container{
-    width: 100%;
-    background-color:plum;
-    text-align: center;
-    position: fixed;
-    bottom : 0;
-    font-size: 1em;
-  
-    
-  }
-=======
 :root {
     --light-blue: #54C5D9;
     --dark-blue: #00003C;
@@ -43,4 +31,3 @@
     margin: 0 0 0 1rem;
     font-size: 18pt;
 }
->>>>>>> fb307571bf451dbcc90e6f77584ef20f18e09338
