@@ -7,7 +7,7 @@ import { CarouselData } from "../../components/Carousel/CarouselData";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FlipCard from "../../components/FlipCard/FlipCard";
 import Navbar from "../../components/Navbar/Navbar"
-import Card from '../../components/Card/Card'
+//import Card from '../../components/Card/Card'
 
 import { ProgressBar } from "react-bootstrap";
 
@@ -37,9 +37,8 @@ function Home() {
       </section>
 
       <div className='home-content'>
-        <Card />
 
-
+        
         <section>
           <h2> Não vacile, há Trilhas em andamento </h2>
 

@@ -1,7 +1,10 @@
 import React from 'react';
 import { useState, useEffect} from "react";
 import { collection, getDocs} from 'firebase/firestore'
-import { db } from '../../services/firebase'
+import { db } from '../../services/firebase.js'
+
+import Header from "../../components/Header/Header"
+
 //  import Carousel from '../../components/Carousel/Carousel';
 //  import uniqueSlide from '../../components/Carousel/CarouselData'
 
@@ -36,6 +39,8 @@ const Article = () => {
     return (
         
         <div>
+            <Header />
+
             <h1>Oi</h1>
             { trilha && trilha.map((article) => {
 
