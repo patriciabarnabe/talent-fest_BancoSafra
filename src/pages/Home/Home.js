@@ -65,16 +65,23 @@ function Home() {
         </section>
         <section className='section-carousel'>
           <h2 className='title-sugestion-home'> Vamos juntas concluir as  <Link className='link-contents' to="/contents">Leituras em Andamento...</Link></h2>
-         
+          {articles != [] && <Carousel docArticle={articles} 
+          cardClicked={clicou}
+          />}
+
         </section>
         <section className='section-carousel'>
           <h2 className='title-sugestion-home'> Para prosperar, <Link className='link-contents' to="/contents">Recomendados para você ;)</Link></h2>
-          
+          {articles != [] && <Carousel docArticle={articles} 
+          cardClicked={clicou}
+          />}
 
         </section>
         <section className='section-carousel'>
           <h2 className='title-sugestion-home'> Você vai transformar o mundo, então  <Link className='link-contents' to="/contents">Descubra novos conteúdos!</Link></h2>
-          
+          {articles != [] && <Carousel docArticle={articles} 
+          cardClicked={clicou}
+          />}
 
         </section>
       </div>
