@@ -2,13 +2,13 @@ import React from "react";
 
 import './card.css'
 
-const Card = (trilha, cardClicked) => {
+const Card = ({trilha, onClick}) => {
 
-    const article = trilha.trilha
-    console.log(article, article.autora)
+    const article = trilha
+    //console.log(article, article.autora)
 
     return (
-        <article className='article' onClick={cardClicked}>
+        <article className='article' onClick={() => onClick(article.id)}>
             <div className="container-card">
 
                 <div className="card">

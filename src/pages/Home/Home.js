@@ -1,8 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { collection, getDocs } from 'firebase/firestore'
-//import { collection, doc, query, where, getDocs } from 'firebase/firestore'
+import { collection, doc, query, where, getDocs } from 'firebase/firestore'
 import { db } from '../../services/firebase.js'
 import Header from "../../components/Header/Header.js";
 import "./home.css";
@@ -17,26 +16,23 @@ import Card from '../../components/Card/Card'
 function Home() {
   const percentage = 73;
 
-  // const [articles, setArticles] = useState([])
-  // const articlesCollectionRef = collection(db, 'trilha')
+  const [articles, setArticles] = useState([])
+  const articlesCollectionRef = collection(db, 'trilha')
 
-  // useEffect(() => {
-  //   const getArticles = async () => {
-  //     const data = await getDocs(articlesCollectionRef);
-  //     setArticles(data.docs.map((article) => ({ ...article.data(), id: article.id })))
-  //   }
+  useEffect(() => {
+    const getArticles = async () => {
+      const data = await getDocs(articlesCollectionRef);
+      setArticles(data.docs.map((article) => ({ ...article.data(), id: article.id })))
+    }
+    getArticles()  
+  }, [])
 
-  //   getArticles()
-  //   console.log(articles)
-
-  // }, [])
-
-  // useEffect(() => {
+  //   useEffect(() => {
   //   console.log(articles)
   // }, [articles])
 
-  function clicou() {
-    console.log('clicou')
+  function clicou(e) {
+    console.log('clicou', e)
   }
 
   return (
@@ -61,26 +57,31 @@ function Home() {
       <div className='home-content'>
         <section className='section-carousel'>
           <h2 className='title-sugestion-home'> Não vacile, há  <Link className='link-contents' to="/contents">Thilhas para concluir!</Link></h2>
-          <Carousel 
-          />
+          {articles != [] && <Carousel docArticle={articles} 
+          cardClicked={clicou}
+          />}
+          
 
         </section>
         <section className='section-carousel'>
           <h2 className='title-sugestion-home'> Vamos juntas concluir as  <Link className='link-contents' to="/contents">Leituras em Andamento...</Link></h2>
-          <Carousel
-          />
+          {articles != [] && <Carousel docArticle={articles} 
+          cardClicked={clicou}
+          />}
 
         </section>
         <section className='section-carousel'>
           <h2 className='title-sugestion-home'> Para prosperar, <Link className='link-contents' to="/contents">Recomendados para você ;)</Link></h2>
-          <Carousel
-          />
+          {articles != [] && <Carousel docArticle={articles} 
+          cardClicked={clicou}
+          />}
 
         </section>
         <section className='section-carousel'>
           <h2 className='title-sugestion-home'> Você vai transformar o mundo, então  <Link className='link-contents' to="/contents">Descubra novos conteúdos!</Link></h2>
-          <Carousel
-          />
+          {articles != [] && <Carousel docArticle={articles} 
+          cardClicked={clicou}
+          />}
 
         </section>
       </div>
