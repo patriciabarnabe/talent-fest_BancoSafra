@@ -5,7 +5,6 @@
   padding: 20px;
   border-radius: 10px;
   font-size: large;
-  
 }
 
 .about {
@@ -14,5 +13,43 @@
 
 .about h1{
   margin: 10px;
-  
+}
+
+.to-login{
+  size: 20pt;
+  bottom: 10px;
+  position: fixed;
+  width: 320px;
+  padding: 10px;
+  margin-left: 27px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  top:1rem;
+  left: 0;
+  position: fixed;
+}
+
+.button-container button {
+  border: none;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-weight: 700;
+  padding: 0.5rem 4.15rem 0.5rem 4.15rem;
+  cursor: pointer;
+}
+
+.button-article:active {
+  background-color: #FFA0AA;
+}
+
+.button-about {
+  background-color: #FFA0AA;
+}
+
+.button-about:active {
+  background-color: white;
 }

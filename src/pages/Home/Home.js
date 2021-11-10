@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { collection, getDocs } from 'firebase/firestore'
 //import { collection, doc, query, where, getDocs } from 'firebase/firestore'
 import { db } from '../../services/firebase.js'
+import Header from "../../components/Header/Header.js";
 
 import "./home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -41,6 +42,8 @@ function Home() {
   }
 
   return (
+    <>
+    <Header />
     <div className="conteiner-home">
       <section className='home-profile'>
         <img className='image-user-home'
@@ -84,6 +87,7 @@ function Home() {
       </div>
       <Navbar />
     </div >
+    </>
   );
 }
 
