@@ -10,22 +10,20 @@ import CarouselArticle from "../../components/Carousel/CarouselArticle";
 const Article = () => {
     const [trilha, setTrilha] = useState([])
     
-    // useEffect(() => {
-    //     onSnapshot(doc(db, 'trilha', "1"), (doc) => { 
-    //         const newArray = []; 
-    //              const obj = {
-    //                 titulo: doc.data().titulo,
-    //                 autora: doc.data().autora,
-    //                 conteudo: doc.data().conteudo,
-    //                 imagem: doc.data().imagem,
-    //                 likes: doc.data().likes,
-    //             };
-    //             newArray.push(obj);
-          
-    //         console.log(newArray);
-    //         setTrilha(newArray)
-    //     })     
-    // }, [])
+    useEffect(() => {
+        onSnapshot(doc(db, 'trilha', "1"), (doc) => { 
+            const newArray = []; 
+                 const obj = {
+                    titulo: doc.data().titulo,
+                    autora: doc.data().autora,
+                    conteudo: doc.data().conteudo,
+                    imagem: doc.data().imagem,
+                    likes: doc.data().likes,
+                };
+                newArray.push(obj);
+            setTrilha(newArray)
+        })     
+    }, [])
     
     
     const likeArticle = async () => {
@@ -45,33 +43,32 @@ const Article = () => {
     }
     
     
+    
     return (
         
         <div>
             <Header />
 
             <h1>Oi</h1>
-        <CarouselArticle />
-            {/* { trilha && trilha.map((article, index) => {
-                console.log(article.imagem)
+        
+             { trilha && trilha.map((article, index) => {
+                 console.log(article)
                 return (
                     <div key={index}>
                         <div>
                             <div>{article.titulo}</div>
                             <div>{article.autora}</div>
-                            <section>
-                                {article.conteudo[0]}
-                            </section>
-                            <section>
-                                {article.conteudo[1]}
-                                
-                            </section>
+                            <CarouselArticle arrayConteudoSlides={article} />
                         </div>
                         <Button  children='likes' onClick={() => likeArticle()}/>
-                        <div>{article.likes}</div>
+                        <div className='icons-card'>
+                            <i className="far fa-bookmark"></i>
+                            <i className="far fa-heart"><span className="number-likes">{article.likes}</span></i>
+                        </div>
+                        
                     </div> 
                 )
-            })}     */}
+            })}    
             
                 
             <Navbar />            
