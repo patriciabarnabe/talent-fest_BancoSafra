@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "./../../assets/logo-g-menina-da-vila.png";
+import logo from "./../../assets/logo-g-menina-de-vila.png";
 
 import "./header.css";
 
