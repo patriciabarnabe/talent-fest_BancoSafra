@@ -5,10 +5,8 @@ import { collection, getDocs } from 'firebase/firestore'
 //import { collection, doc, query, where, getDocs } from 'firebase/firestore'
 import { db } from '../../services/firebase.js'
 import Header from "../../components/Header/Header.js";
-
 import "./home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 // import { CarouselData } from "../../components/Carousel/CarouselData";
 // import FlipCard from "../../components/FlipCard/FlipCard";
 import { ProgressBar } from "react-bootstrap";
@@ -63,7 +61,8 @@ function Home() {
       <div className='home-content'>
         <section className='section-carousel'>
           <h2 className='title-sugestion-home'> Não vacile, há  <Link className='link-contents' to="/contents">Thilhas para concluir!</Link></h2>
-          <Carousel/>
+          <Carousel 
+          />
 
         </section>
         <section className='section-carousel'>
@@ -85,9 +84,9 @@ function Home() {
 
         </section>
       </div>
-      <Navbar />
     </div >
-    </>
+    <Navbar />
+  </>
   );
 }
 
