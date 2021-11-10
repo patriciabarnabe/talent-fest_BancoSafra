@@ -14,19 +14,7 @@ const Header = () => {
         <p> Menina de Vila </p>
       </header>
 
-      <div className="button-container">
-        <Link to="/article">
-          <button type="button" className="button-article">
-            Artigos
-          </button>
-        </Link>
-
-        <Link to="/about">
-          <button type="button" className="button-about">
-            Sobre
-          </button>
-        </Link>
-      </div>
+      
     </>
   );
 };
