@@ -61,7 +61,8 @@ function Home() {
       <div className='home-content'>
         <section className='section-carousel'>
           <h2 className='title-sugestion-home'> Não vacile, há  <Link className='link-contents' to="/contents">Thilhas para concluir!</Link></h2>
-          <Carousel/>
+          <Carousel 
+          />
 
         </section>
         <section className='section-carousel'>
