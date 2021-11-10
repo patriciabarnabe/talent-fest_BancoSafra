@@ -6,15 +6,18 @@
     width: 100%;
     align-items: center;
     justify-content: space-around;
+    bottom: 0;
+    left: 0;
+    position: fixed;
 }
 
-.fa-home, .fa-book-open, .fa-bookmark, .fa-user {
+.fa-home, .fa-book-open, .fa-star, .fa-user {
     font-size: 25px;
 } 
 
 .link {
     color: rgb(2, 2, 2);
   }
-  .link:hover {
+  .link:active {
      color: #FFF;
   }

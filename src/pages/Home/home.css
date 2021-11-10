@@ -34,10 +34,36 @@
 
 .home-userName {
     font-size: 20px;
-    font-weight: bold
+    font-weight: bold;
+    color: black;
 }
 
 .home-content {
     width: 100%;
     overflow: auto;
+}
+
+.section-carousel {
+    margin-top: 30px;
+    margin-bottom: 10px;        
+}
+
+.title-sugestion-home, .link-contents {
+    font-size: 20px;
+}
+
+.link-contents {
+    text-decoration: none;
+    color: #54C5D9;     
+}
+
+.link-contents:active {       
+    background-color: #F54868;
+    border-radius: 30px;  
+    padding: 5px;
+}
+
+.title-sugestion-home {
+    margin-left: 20px;
+    margin-right: 20px;
 }

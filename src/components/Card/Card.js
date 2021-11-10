@@ -2,28 +2,33 @@ import React from "react";
 
 import './card.css'
 
-const Card = () => {
+const Card = (article) => {
 
     return (
         <article className='article'>
-            <div class="container-card">
+            <div className="container-card">
 
-                <div class="card">
-                    <div class="face face1">
-                        <div class="content">
-                            <span class="stars"></span>
-                            <h2 class="text-card">Java</h2>
-                            <p class="text-card">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+                <div className="card">
+                    <div className="face face1">
+                        <div className="content">
+                            <span className="stars"></span>
+                            <h2 className="text-card">{article.autora}</h2>
+                            <p className="text-card">{article.conteudo}</p>
                         </div>
                     </div>
-                    <div class="face face2">
+                    <div className="face face2">
                         <section className='info-card'>
-                            <h2 className='title-card'>01</h2>
+                            <h2 className='title-card'>{article.titulo}</h2>
                             <div className='icons-card'>
-                                <i class="fas fa-piggy-bank"></i>
-                                <i class="far fa-heart"></i>
+                                <i class="far fa-bookmark"></i>
+                                <i className="far fa-heart"><span className="number-likes">{article.like}</span></i>
                             </div>
                         </section>
+                        <img className='image-card'
+                            src={article.imagem}
+                        />
+                        <h3 className='category-card'>{article.categoria}</h3>
+
                     </div>
                 </div>
             </div>
@@ -44,7 +49,7 @@ export default Card;
 //             </div>
 //             <div className='card-title'>
 //             </div>
-            
+
 //         </div>
 //     )
 // }
