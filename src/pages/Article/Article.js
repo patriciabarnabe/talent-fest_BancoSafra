@@ -60,9 +60,9 @@ const Article = () => {
                             <div>{article.autora}</div>
                             <CarouselArticle arrayConteudoSlides={article} />
                         </div>
-                        <Button  children='likes' onClick={() => likeArticle()}/>
+                        {/* <Button  children='likes' onClick={() => likeArticle()}/> */}
                         <div className='icons-card'>
-                            <i className="far fa-bookmark"></i>
+                            <button onClick={() => likeArticle()}><i className="far fa-bookmark"></i></button>
                             <i className="far fa-heart"><span className="number-likes">{article.likes}</span></i>
                         </div>
                         
