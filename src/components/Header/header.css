@@ -1,0 +1,33 @@
+:root {
+    --light-blue: #54C5D9;
+    --dark-blue: #00003C;
+    --light-pink: #F54868;
+    --dark-pink: #B4093E;
+    --off-white: #F8FFFF;
+    --black: #000000;
+}
+
+.header {
+    background: var(--light-pink);
+    display: flex;
+    padding: 10px 20px;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    top:0;
+    left: 0;
+    position: fixed;
+}
+
+.header img {
+    width: 14vw;
+}
+
+.header p {
+    text-align: center;
+    font-weight: 600;
+    color: var(--off-white);
+    margin: 0 0 0 1rem;
+    font-size: 18pt;
+}
