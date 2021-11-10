@@ -5,6 +5,11 @@ import { CarouselData } from "../../components/Carousel/CarouselData";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FlipCard from "../../components/FlipCard/FlipCard";
 import Navbar from "../../components/Navbar/Navbar"
+<<<<<<< HEAD
+=======
+import Header from "../../components/Header/Header"
+
+>>>>>>> fb307571bf451dbcc90e6f77584ef20f18e09338
 import { ProgressBar } from "react-bootstrap";
 
 function Home() {
@@ -13,6 +18,8 @@ function Home() {
   return (
     <>
       <div>
+        <Header />
+
         <p> Não vacile, Trilhas em andamento </p>
 
         <Carousel slides={CarouselData} uniqueSlide={CarouselData} />
