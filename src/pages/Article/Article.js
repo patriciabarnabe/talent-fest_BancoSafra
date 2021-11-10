@@ -2,29 +2,31 @@ import React from 'react';
 import { useState, useEffect} from "react";
 import { onSnapshot, getDoc, doc, updateDoc} from 'firebase/firestore'
 import { db } from '../../services/firebase.js'
-import Header from "../../components/Header/Header"
-import Navbar from "../../components/Navbar/Navbar"
+import Header from '../../components/Header/Header';
+import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/button.js';
+import CarouselArticle from "../../components/Carousel/CarouselArticle";
 
 const Article = () => {
     const [trilha, setTrilha] = useState([])
     
-    useEffect(() => {
-        const trilhas = onSnapshot(doc(db, 'trilha', "1"), (doc) => { 
-            const newArray = []; 
-                 const obj = {
-                    titulo: doc.data().titulo,
-                    autora: doc.data().autora,
-                    conteudo: doc.data().conteudo,
-                    imagem: doc.data().imagem,
-                    likes: doc.data().likes,
-                };
-                newArray.push(obj);
+    // useEffect(() => {
+    //     onSnapshot(doc(db, 'trilha', "1"), (doc) => { 
+    //         const newArray = []; 
+    //              const obj = {
+    //                 titulo: doc.data().titulo,
+    //                 autora: doc.data().autora,
+    //                 conteudo: doc.data().conteudo,
+    //                 imagem: doc.data().imagem,
+    //                 likes: doc.data().likes,
+    //             };
+    //             newArray.push(obj);
           
-            console.log(newArray);
-            setTrilha(newArray)
-        })     
-    }, [])
+    //         console.log(newArray);
+    //         setTrilha(newArray)
+    //     })     
+    // }, [])
+    
     
     const likeArticle = async () => {
         const trilhas = doc(db, "trilha", "1");
@@ -49,12 +51,8 @@ const Article = () => {
             <Header />
 
             <h1>Oi</h1>
-
-        {/* <Carousel
-           slides = {<UniqueCarouselArticle stateCollection={trilha} slide={trilha.conteudo} />} 
-           uniqueSlide={trilha}
-        /> */}
-            { trilha && trilha.map((article, index) => {
+        <CarouselArticle />
+            {/* { trilha && trilha.map((article, index) => {
                 console.log(article.imagem)
                 return (
                     <div key={index}>
@@ -73,7 +71,7 @@ const Article = () => {
                         <div>{article.likes}</div>
                     </div> 
                 )
-            })}    
+            })}     */}
             
                 
             <Navbar />            
