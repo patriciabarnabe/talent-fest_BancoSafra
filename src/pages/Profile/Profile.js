@@ -28,10 +28,7 @@ const Profile = () => {
     localStorage.setItem('name', name);
     localStorage.setItem('local', local);
     localStorage.setItem('dream', dream);
-
-    setName(localStorage.getItem('name'))
   }
-
 
   const percentage = 73;
 
@@ -76,9 +73,9 @@ const Profile = () => {
           />
         </form>
 
-        <section class="profile-buttons">
-          <button class="btn-edit" onClick={enableEdit}> <i class="far fa-edit"></i> </button>
-          <button class="btn-save" onClick={saveChanges} style={{ display: `${showSaveBtn}` }}> <i class="fas fa-check"></i> </button>
+        <section className="profile-buttons">
+          <button className="btn-edit" onClick={enableEdit}> <i className="far fa-edit"></i> </button>
+          <button className="btn-save" onClick={saveChanges} style={{ display: `${showSaveBtn}` }}> <i className="fas fa-check"></i> </button>
         </section>
 
         <ProgressBar
