@@ -12,6 +12,11 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 import "./login.css";
+
+import LogoSafra from "./../../assets/logo-safra.png";
+import GoBack from "./../../assets/seta-branca.png";
+import GoogleBtn from "./../../assets/google-btn.png";
+
 import { Link } from "react-router-dom";
 
 function Login() {
@@ -109,10 +114,8 @@ function Login() {
     setIsModalVisible(true);
   }
   return (
-    <div className='geral'>
-      {/* <img className="polygon" src={Polygon} alt="Polígono" />
-
-      <img className="photo-profile" src={LoginImage} alt="Imagem de Login" /> */}
+    <div className="geral">
+      <img className="logo-safra" src={LogoSafra} alt="Logo Safra" />
 
       <form className="btn-login">
         <Button onClick={modalLogin} type="button" variant="class-button">
@@ -122,9 +125,15 @@ function Login() {
           Cadastro
         </Button>
       </form>
+
+      <Link to="/home">
+        <img src={GoBack} alt="Seta de voltar" className="goback" />
+      </Link>
+
       {isModalVisible ? (
         <Modal onClose={() => setIsModalVisible(false)}>
-          <h2>Cadastrar</h2>
+          <h2 className="title-login text-align-center">Cadastrar</h2>
+          <p className="title-login">Nome</p>
           <div className="input-group">
             <i className="far fa-user"></i>
             <Input
@@ -136,6 +145,7 @@ function Login() {
               inputClassName=""
             />
           </div>
+          <p className="title-login">Email</p>
           <div className="input-group">
             <i className="far fa-envelope"></i>
             <Input
@@ -147,6 +157,7 @@ function Login() {
               inputClassName=""
             />
           </div>
+          <p className="title-login">Senha</p>
           <div className="input-group">
             <i className="fas fa-lock"></i>
             <Input
@@ -158,16 +169,18 @@ function Login() {
               inputClassName="input-form"
             />
           </div>
-          <Button onClick={cadastro} type="button">
-            CADASTRAR
-          </Button>
-          <p>Já tem cadastro? </p>
-          <Link to={(e) => modalLogin(e)}> Clique aqui</Link>
+
+          <button onClick={cadastro} type="button" className='class-button cadastro-btn'>
+              Cadastrar
+            </button>
+          {/* <p>Já tem cadastro? </p>
+          <Link to={(e) => modalLogin(e)}> Clique aqui</Link> */}
         </Modal>
       ) : null}
       {modal ? (
         <Modal onClose={() => setIsModal(false)}>
-          <h2>Login</h2>
+          <h2 className="title-login text-align-center">Login</h2>
+          <p className="title-login"> Email </p>
           <div className="input-group">
             <i className="far fa-envelope"></i>
             <Input
@@ -179,6 +192,7 @@ function Login() {
               inputClassName="input-form"
             />
           </div>
+          <p className="title-login"> Senha </p>
           <div className="input-group">
             <i className="fas fa-lock"></i>
             <Input
@@ -190,22 +204,28 @@ function Login() {
               inputClassName="input-form"
             />
           </div>
-          <Button onClick={login} type="button">
-            ENTRAR
-          </Button>
-          <div className="input-group">
-            <Button onClick={googleTeste} type="button">
-              <i class="fab fa-google"></i>
-            </Button>
+          <span className='span-login'>
+            Redefinir senha: Digite seu e-mail e
+          </span>
+          <button onClick={redefinir} type="button" className='clean-button'>
+             clique aqui!
+          </button>
+          <div className="btn-container">
+            <button onClick={login} type="button" className='class-button login-btn'>
+              Entrar
+            </button>
+            <div className="input-group">
+              <button onClick={googleTeste} type="button" className="google-btn">
+                <img src={GoogleBtn} alt="Botão do Google" />
+              </button>   
+            </div>
           </div>
-          <Button onClick={redefinir} type="button">
-            redefinir
-          </Button>
+
         </Modal>
       ) : null}
       {modalReset ? (
         <Modal onClose={() => setIsModalReset(false)}>
-          <h2>Login</h2>
+          <h2 className="title-login">Login</h2>
           <div className="input-group">
             <i className="far fa-envelope"></i>
             <Input

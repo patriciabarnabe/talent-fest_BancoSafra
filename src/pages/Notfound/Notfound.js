@@ -1,5 +1,5 @@
 import React from 'react';
-import goback from './../../assets/seta-voltar.png'
+import goback from './../../assets/seta-rosa.png'
 import { Link } from 'react-router-dom';
 
 import './notFound.css';
