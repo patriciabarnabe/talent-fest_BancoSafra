@@ -7,7 +7,7 @@ import Button from "../../components/Button/button";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,
   signInWithPopup, GoogleAuthProvider, sendPasswordResetEmail
 } from "firebase/auth";
-import { IconName } from "react-icons/fa";
+import { IconName } from "react-icons/fa"; 
 
 function Login() {
   const [isModalVisible, setIsModalVisible] = useState(false);

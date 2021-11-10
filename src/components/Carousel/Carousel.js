@@ -1,44 +1,46 @@
-import React, { useState } from 'react';
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import React, { useRef} from 'react';
+
+import Card from '../Card/Card';
 
 import './carousel.css'
 
-const Carousel = ({ slides, uniqueSlide }) => {
-  const [current, setCurrent] = useState(0);
-  const length = slides.length;
+const Carousel = () => {
 
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
+  const cards = ["1", "2", '3', '4', "5", '6', '7', '8', '9']
+  const carousel = useRef(null)
+  
+  const handleLeftClick = (e) => {
+    e.preventDefault()
+    console.log(carousel.current.offsetWidth)
+    carousel.current.scrollLeft -= carousel.current.offsetWidth
 
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
+  }
 
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
+  const handleRightClick = (e) => {
+    e.preventDefault()
+    carousel.current.scrollLeft += carousel.current.offsetWidth
   }
 
   return (
-    <section className='slider'>
-        
-        <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-        <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
+    <section className='container-carousel'>
+      <i className="fas fa-chevron-left" alt='Scroll left'
+      onClick={handleLeftClick}
+      />
 
-      {uniqueSlide && uniqueSlide.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? 'slide active' : 'slide'}
-            key={index}
-          >
-            {index === current && (
-              <img src={slide.image} alt='Imagens da Trilha de Aprendizado' className='image' />
-            )}
-          </div>
-        );
-      })}
+      <div className='carousel' ref={carousel}>
+
+        {cards.map((card, index) => {
+          return (
+            <Card key={index} />
+          )
+        })}
+      </div>
+      <i className="fas fa-chevron-right" alt='Scroll right'
+      onClick={handleRightClick} 
+      />
     </section>
-  );
-};
+
+  )
+}
 
 export default Carousel;
