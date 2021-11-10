@@ -26,6 +26,7 @@ const Article = () => {
         })     
     }, [])
     
+    
     const likeArticle = async () => {
         const trilhas = doc(db, "trilha", "1");
         const esperandoGetDocs = getDoc(trilhas)  
