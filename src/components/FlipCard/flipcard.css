@@ -4,7 +4,7 @@
 
 .flip-card-outer {
   width: 300px;
-  height: 400px;
+  height: 300px;
   margin: 25px 0;
 }
 
@@ -31,12 +31,20 @@
 
 .flip-card-outer .flip-card-inner .card.front {
   transform: rotateY(0);
-  background-color: #2d2d2d;
+  background-color: var(--light-blue);
   color: #fff;
 }
 
 .flip-card-outer .flip-card-inner .card.back {
   transform: rotateY(180deg);
-  background-color: #fff;
+  background-color: var(--off-white);
   color: #2d2d2d;
+}
+
+.image-card{
+  width: 50%;
+}
+
+.d-flex{
+  flex-direction: column;
 }

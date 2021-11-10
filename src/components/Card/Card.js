@@ -5,7 +5,7 @@ import './card.css'
 const Card = (trilha, cardClicked) => {
 
     const article = trilha.trilha
-    console.log(article, article.autora)
+    console.log(article, article.autora, article.imagem)
 
     return (
         <article className='article' onClick={cardClicked}>

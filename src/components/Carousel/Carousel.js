@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../../services/firebase'
 
-import Card from '../Card/Card';
+// import Card from '../Card/Card';
+import FlipCard from "../../components/FlipCard/FlipCard.js";
 
 import './carousel.css'
 
@@ -52,7 +53,7 @@ const Carousel = () => {
       <div className='carousel' ref={carousel}>
         {articles != [] && articles?.map((card, index) => {
           return (
-            <Card key={index} trilha={card} 
+            <FlipCard key={index} trilha={card} 
             cardClicked={clicou}
             />
           )
