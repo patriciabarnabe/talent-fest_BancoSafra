@@ -1,31 +1,48 @@
-import './home.scss'
-import Carousel from '../../components/Carousel/Carousel';
-import { CarouselData } from '../../components/Carousel/CarouselData';
+import React from "react";
+import "./home.css";
+import Carousel from "../../components/Carousel/Carousel";
+import { CarouselData } from "../../components/Carousel/CarouselData";
+import "bootstrap/dist/css/bootstrap.min.css";
+import FlipCard from "../../components/FlipCard/FlipCard";
+import Navbar from "../../components/Navbar/Navbar"
+import { ProgressBar } from "react-bootstrap";
 
 function Home() {
-    return (
-      <>
-        <header className='header-container'>
-            <img src='' alt=''/>
-            <div>
-              <h1> Olá, Maria!</h1>
-              <span>⭐⭐⭐⭐⭐</span>
+  const percentage = 73;
+
+  return (
+    <>
+      <div>
+        <p> Não vacile, Trilhas em andamento </p>
+
+        <Carousel slides={CarouselData} uniqueSlide={CarouselData} />
+      </div>
+      <div>
+        <p> Não vacile, Trilhas em andamento </p>
+
+        <div className="container">
+          <div className="row h-100">
+            <div class="col d-flex flex-column flex-md-row justify-content-around align-items-center">
+              <FlipCard />
             </div>
-        </header>
-
-        <div>
-          <p> Não vacile, Trilhas em andamento </p>
-          
-            <Carousel slides={CarouselData}/>
-
-          <p> Para prosperar, Recomendados para você </p>
-
-            <Carousel slides={CarouselData}/>
-            
-          <p> Você vai transformar o mundo ao seu redor, Descubra novos conteúdos </p>
+          </div>
         </div>
-      </>
-    );
-  }
-  
-  export default Home;
+
+        <p> Para prosperar, Recomendados para você </p>
+
+        <ProgressBar
+          now={percentage}
+          label={`${percentage}% `}
+          className="m-5"
+        />
+
+        <p>
+          Você vai transformar o mundo ao seu redor, Descubra novos conteúdos.
+        </p>
+      </div>
+      <Navbar />
+    </>
+  );
+}
+
+export default Home;

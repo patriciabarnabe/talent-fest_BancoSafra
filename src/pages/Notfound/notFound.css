@@ -1,0 +1,25 @@
+.not-found {
+  color: #fff;
+  font-size: 70%;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 100;
+  margin-top: 10%;
+}
+
+.not-found p {
+  font-size: 2em;
+  text-shadow: #383838 1px 1px, #383838 2px 2px, #383838 3px 3px,
+    #383838 4px 4px, #383838 5px 5px;
+}
+
+.not-found h1 {
+  font-size: 15em;
+  text-shadow: #383838 1px 1px, #383838 2px 2px, #383838 3px 3px,
+    #383838 4px 4px, #383838 5px 5px, #383838 6px 6px, #383838 7px 7px,
+    #383838 8px 8px, #383838 9px 9px, #383838 10px 10px, #383838 11px 11px,
+    #252525 12px 12px, #252525 13px 13px, #252525 14px 14px, #252525 15px 15px,
+    #252525 16px 16px, #252525 17px 17px, #252525 18px 18px, #252525 19px 19px,
+    #1a1818 20px 20px, #1a1818 21px 21px, #1a1818 22px 22px, #1a1818 23px 23px,
+    #1a1818 24px 24px, #1a1818 25px 25px, #1a1818 26px 26px, #1a1818 27px 27px;
+}
