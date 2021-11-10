@@ -13,15 +13,15 @@ const Card = (article) => {
                         <div className="content">
                             <span className="stars"></span>
                             <h2 className="text-card">{article.autora}</h2>
-                            <p className="text-card">{article.conteudo}</p>
+                            <p className="text-card">{article.descricao}</p>
                         </div>
                     </div>
                     <div className="face face2">
                         <section className='info-card'>
                             <h2 className='title-card'>{article.titulo}</h2>
                             <div className='icons-card'>
-                                <i class="far fa-bookmark"></i>
-                                <i className="far fa-heart"><span className="number-likes">{article.like}</span></i>
+                                <i className="far fa-bookmark"></i>
+                                <i className="far fa-heart"><span className="number-likes">{article.likes}</span></i>
                             </div>
                         </section>
                         <img className='image-card'

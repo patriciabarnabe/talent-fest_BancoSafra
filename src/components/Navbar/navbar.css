@@ -8,7 +8,7 @@
     justify-content: space-around;
     bottom: 0;
     left: 0;
-    position: fixed;
+    position: fixed;    
 }
 
 .fa-home, .fa-book-open, .fa-star, .fa-user {
