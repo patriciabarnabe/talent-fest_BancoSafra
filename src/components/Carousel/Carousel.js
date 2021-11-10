@@ -59,7 +59,7 @@ const Carousel = ({docArticle, cardClicked}) => {
         {cards != [] && cards?.map((card, index) => {
           return (
             <FlipCard key={index} trilha={card} 
-            cardClicked={clicou}
+            onClick={cardClicked}
             />
           )
         })}

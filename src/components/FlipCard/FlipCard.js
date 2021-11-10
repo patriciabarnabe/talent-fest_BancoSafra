@@ -6,15 +6,15 @@ import "./flipcard.css";
 import cn from "classnames";
 import imgEstudar from '../../assets/estudar-2.jpg'
 
-function FlipCard(trilha) {
+function FlipCard({trilha, onClick}) {
   const [showBack, setShowBack] = useState(false);
 
   function handleClick() {
     setShowBack(!showBack);
   }
-  const article = trilha.trilha;
+  const article = trilha;
   return (
-    <div className="flip-card-outer" onClick={handleClick}>
+    <div className="flip-card-outer" onClick={() => onClick(article.id)}>
       <div className={cn("flip-card-inner", { showBack })}>
         <div className="card front">
           <div className="card-body d-flex justify-content-center align-items-center">
