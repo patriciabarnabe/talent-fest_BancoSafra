@@ -6,22 +6,22 @@ import './notFound.css';
 
 const NotFound = () => {
   return (
-    <div class='outer-wrapper'>
-      <div class='inner'>
-        <div class='four-wrapper'>
-          <div class='leg-1'></div>
-          <div class='leg-2'></div>
-          <div class='leg-3'></div>
+    <div className='outer-wrapper'>
+      <div className='inner'>
+        <div className='four-wrapper'>
+          <div className='leg-1'></div>
+          <div className='leg-2'></div>
+          <div className='leg-3'></div>
         </div>
 
-        <div class='zero-wrapper'>
-          <div class='zero-wrapper__middle'></div>
+        <div className='zero-wrapper'>
+          <div className='zero-wrapper__middle'></div>
         </div>
 
-        <div class='four-wrapper2'>
-          <div class='leg-12'></div>
-          <div class='leg-22'></div>
-          <div class='leg-32'></div>
+        <div className='four-wrapper2'>
+          <div className='leg-12'></div>
+          <div className='leg-22'></div>
+          <div className='leg-32'></div>
         </div>
       </div>
 
