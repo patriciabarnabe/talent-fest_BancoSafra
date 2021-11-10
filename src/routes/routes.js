@@ -10,6 +10,7 @@ import NotFound from '../pages/Notfound/Notfound'
 import Login from '../pages/Login/Login';
 import Profile from '../pages/Profile/Profile';
 import Contents from '../pages/Contents/Contents';
+import About from '../pages/About/About';
 
 export const Rotas = () => {
   return (
@@ -20,6 +21,7 @@ export const Rotas = () => {
       <Route path='/login' element={<Login />} />
       <Route path='/profile' element={<Profile />} />
       <Route path='/contents' element={<Contents />} />
+      <Route path='/about' element={<About />} />
     </Routes>
   )
 }
