@@ -118,12 +118,12 @@ function Login() {
       <img className="logo-safra" src={LogoSafra} alt="Logo Safra" />
 
       <form className="btn-login">
-        <Button onClick={modalLogin} type="button" variant="class-button">
+        <button onClick={modalLogin} type="button" className="class-button">
           Login
-        </Button>
-        <Button onClick={modalRegister} type="button" variant="class-button">
+        </button>
+        <button onClick={modalRegister} type="button" className="class-button">
           Cadastro
-        </Button>
+        </button>
       </form>
 
       <Link to="/home">
