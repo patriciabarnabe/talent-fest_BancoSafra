@@ -15,9 +15,10 @@
 .modal-container {
     background-color: black;
     color: red;
-    width: 60%;
+    width: 70%;
     height: 50%;
-    border-radius: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 .close {
     background-color: transparent;
@@ -27,6 +28,7 @@
     border: none;
     right: calc(-100% + 64px);
     top: 16px;
+    left: 21rem;
     cursor: pointer;
     display: flex;
     position: relative;
@@ -53,4 +55,8 @@
     justify-content: center;
     text-align: center;
     display: flex;
+}
+
+.content {
+    margin: 0 2rem;
 }

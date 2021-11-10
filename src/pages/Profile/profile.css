@@ -1,0 +1,44 @@
+:root {
+    --light-blue: #54C5D9;
+    --dark-blue: #00003C;
+    --light-pink: #F54868;
+    --dark-pink: #B4093E;
+    --off-white: #F8FFFF;
+    --black: #000000;
+}
+
+.card-profile {
+    width: 19rem;
+    margin: 8rem 5rem 0 2rem;
+    text-align: center;
+    background-color: var(--off-white);
+    border-radius: 25px;
+    padding-bottom: 1rem;
+}
+
+.profile-photo {
+    width: 160px;
+    height: 169px;
+    padding: 1rem 0.5rem;
+}
+
+.card-profile p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    padding: 0 0.8rem 0 0.8rem;
+}
+
+.profile-stars {
+    width: 6rem;
+    height: 1rem;
+}
+
+.contents-profile{
+    margin: 2rem 0 0 2rem;
+}
+
+.favorites-container, .read-container p{
+    font-weight: 700;
+}
