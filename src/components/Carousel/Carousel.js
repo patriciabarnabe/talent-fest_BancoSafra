@@ -1,30 +1,36 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { collection, getDocs } from 'firebase/firestore'
-import { db } from '../../services/firebase'
+// import { collection, getDocs } from 'firebase/firestore'
+// import { db } from '../../services/firebase'
 
 import Card from '../Card/Card';
 
 import './carousel.css'
 
-const Carousel = () => {
+const Carousel = (docArticle, cardClicked) => {
 
-  const [articles, setArticles] = useState([])
-  const articlesCollectionRef = collection(db, 'trilha')
+  const doc = docArticle;
+  const cards = doc.docArticle
+  console.log(cards)
 
-  useEffect(() => {
-    const getArticles = async () => {
-      const data = await getDocs(articlesCollectionRef);
-      setArticles(data.docs.map((article) => ({ ...article.data(), id: article.id })))
-    }
+  // const [document, setDocument] = useState([])
+  // //const articlesCollectionRef = collection(db, 'trilha')
 
-    getArticles()
-    console.log(articles)
+  // setDocument([...cards])
 
-  }, [])
+  // useEffect(() => {
+  //   const getArticles = async () => {
+  //     const data = await getDocs(articlesCollectionRef);
+  //     setArticles(data.docs.map((article) => ({ ...article.data(), id: article.id })))
+  //   }
 
-    useEffect(() => {
-    console.log(articles)
-  }, [articles])
+  //   getArticles()
+  //   console.log()
+
+  // }, [])
+
+  //   useEffect(() => {
+  //   console.log(document)
+  // }, [document])
 
   function clicou() {
     console.log('clicou')
@@ -50,10 +56,9 @@ const Carousel = () => {
         onClick={handleLeftClick}
       />
       <div className='carousel' ref={carousel}>
-        {articles != [] && articles?.map((card, index) => {
+        {cards != [] && cards?.map((card, index) => {
           return (
-            <Card key={index} trilha={card} 
-            cardClicked={clicou}
+            <Card key={index} trilha={card} onClick={() => cardClicked()}
             />
           )
         })}
