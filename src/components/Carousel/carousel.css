@@ -1,11 +1,11 @@
 
-.container-carousel {
+.container-carousel, .container-carousel-article {
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.container-carousel .carousel {
+.container-carousel .carousel, .container-carousel-article .carousel{
     width: 100%;
     display: flex;
     overflow-x: auto;
@@ -14,6 +14,9 @@
  
 }
 
+.container-carousel-article{
+    margin-top: 50%;
+}
 .fa-chevron-left, .fa-chevron-right {
     font-size: 60px;
     color: #54C5D9;
