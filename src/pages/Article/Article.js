@@ -1,40 +1,47 @@
 import React from 'react';
 import { useState, useEffect} from "react";
-import { collection, getDocs} from 'firebase/firestore'
+import { onSnapshot, getDoc, doc, updateDoc} from 'firebase/firestore'
 import { db } from '../../services/firebase.js'
-
 import Header from "../../components/Header/Header"
-
-//  import Carousel from '../../components/Carousel/Carousel';
-//  import uniqueSlide from '../../components/Carousel/CarouselData'
-
 import Navbar from "../../components/Navbar/Navbar"
+import Button from '../../components/Button/button.js';
 
 const Article = () => {
     const [trilha, setTrilha] = useState([])
     
     useEffect(() => {
-        const trilhas = collection(db, 'trilha');
-        const esperandoGetDocs = getDocs(trilhas)
-        esperandoGetDocs.then((collectionTrilha) => {
-             const newArray = [];
-            collectionTrilha.forEach((doc) => {
-
-                console.log(doc); 
+        const trilhas = onSnapshot(doc(db, 'trilha', "1"), (doc) => { 
+            const newArray = []; 
                  const obj = {
-                    Titulo: doc.data().Titulo,
-                    Autora: doc.data().Autora,
+                    titulo: doc.data().titulo,
+                    autora: doc.data().autora,
+                    conteudo: doc.data().conteudo,
+                    imagem: doc.data().imagem,
+                    likes: doc.data().likes,
                 };
                 newArray.push(obj);
-            });
+          
             console.log(newArray);
-            setTrilha(newArray);
-             
-        })
-    // const retornoDafuncao = esperandoGetDocs.docs.forEach(doc => doc.data())
-    // console.log(retornoDafuncao)
-    // return retornoDafuncao
+            setTrilha(newArray)
+        })     
     }, [])
+    
+    const likeArticle = async () => {
+        const trilhas = doc(db, "trilha", "1");
+        const esperandoGetDocs = getDoc(trilhas)  
+        esperandoGetDocs.then((docTrilha) => {   
+            const obj = {
+                likes: docTrilha.data().likes
+            };
+            const addLike = obj.likes +=1
+            console.log(addLike)
+            updateDoc(trilhas, {
+            likes: addLike
+            });
+        return addLike
+        })
+    }
+    
     
     return (
         
@@ -42,17 +49,36 @@ const Article = () => {
             <Header />
 
             <h1>Oi</h1>
-            { trilha && trilha.map((article) => {
 
+        {/* <Carousel
+           slides = {<UniqueCarouselArticle stateCollection={trilha} slide={trilha.conteudo} />} 
+           uniqueSlide={trilha}
+        /> */}
+            { trilha && trilha.map((article, index) => {
+                console.log(article.imagem)
                 return (
-                    <div>
-                        <div>{article.Titulo}</div>
-                        <div>{article.Autora}</div>
-                    </div>
+                    <div key={index}>
+                        <div>
+                            <div>{article.titulo}</div>
+                            <div>{article.autora}</div>
+                            <section>
+                                {article.conteudo[0]}
+                            </section>
+                            <section>
+                                {article.conteudo[1]}
+                                
+                            </section>
+                        </div>
+                        <Button  children='likes' onClick={() => likeArticle()}/>
+                        <div>{article.likes}</div>
+                    </div> 
                 )
-            })}
+            })}    
+            
+                
             <Navbar />            
         </div>
     )
 }
+
 export default Article;

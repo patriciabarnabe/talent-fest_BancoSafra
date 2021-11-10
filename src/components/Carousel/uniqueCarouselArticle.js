@@ -1,6 +1,12 @@
-import Button from '../Button/button';
 
-export const CarouselSlideArticle = ({stateCollection}) => {
+
+ const UniqueCarouselArticle = ({stateCollection}) => {
+  
+  const showCardArticle = () => {
+    for (item of stateCollection){
+      item
+    } 
+  }
   return (
     <> 
       <section>
@@ -10,19 +16,10 @@ export const CarouselSlideArticle = ({stateCollection}) => {
               <ul className="title-article">
                 <li>{item.title}</li>
               </ul>
-              <img> R$ {item.image},00</img>
+              <img>{item.image}</img>
               <ul className="slides">
-                <li>{item.slide1}</li>
-                <li>{item.slide2}</li>
-                <li>{item.slide3}</li>
-                <li>{item.slide4}</li>
-                <li>{item.slide5}</li>
-                <li>{item.slide6}</li>
-                <li>{item.slide7}</li>
-                <li>{item.slide8}</li>
-                <li>{item.slide9}</li>
+                <li>{showCardArticle}</li>
               </ul>
-            {item.slide9 ? <Button children='Finalizar'/> : '' } 
             </article>
           </div>
         ))}
@@ -31,5 +28,5 @@ export const CarouselSlideArticle = ({stateCollection}) => {
     </>
   )
 }
-    
+export default UniqueCarouselArticle;
   
