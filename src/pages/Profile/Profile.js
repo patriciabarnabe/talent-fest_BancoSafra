@@ -3,7 +3,7 @@ import { useState} from "react";
 
 import Header from "../../components/Header/Header";
 import { ProgressBar } from "react-bootstrap";
-// import Navbar from '../../components/Navbar/Navbar'
+import Navbar from '../../components/Navbar/Navbar'
 
 import photo from "./../../assets/foto-perfil.png";
 import stars from "./../../assets/stars.png";
@@ -95,7 +95,7 @@ const Profile = () => {
         </div>
       </div>
 
-      {/* <Navbar /> */}
+      <Navbar />
     </>
   );
 };
