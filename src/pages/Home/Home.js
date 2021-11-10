@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
 import { collection, getDocs } from 'firebase/firestore'
 //import { collection, doc, query, where, getDocs } from 'firebase/firestore'
 import { db } from '../../services/firebase.js'
-
+import Header from "../../components/Header/Header.js";
 import "./home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 // import { CarouselData } from "../../components/Carousel/CarouselData";
 // import FlipCard from "../../components/FlipCard/FlipCard";
 import { ProgressBar } from "react-bootstrap";
@@ -41,6 +40,8 @@ function Home() {
   }
 
   return (
+    <>
+    <Header />
     <div className="conteiner-home">
       <section className='home-profile'>
         <img className='image-user-home'
@@ -82,8 +83,9 @@ function Home() {
 
         </section>
       </div>
-      <Navbar />
     </div >
+    <Navbar />
+  </>
   );
 }
 
