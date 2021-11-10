@@ -1,5 +1,43 @@
 .conteiner-home {
-    max-height: 800px;   
+    height: 100%;   
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.home-profile {
+    background:azure;
+    width: 75%;
+    border-radius: 30px;    
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.image-user-home {
+    width: 70px;
+    height: 60px;
+    margin: 10px 0px 0px 10px;    
+    border-radius: 100%;
+    border: 2px, solid, transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);    
+}
+
+.home-userInfo {
+    width: 70%;
+    margin-top: 13px;
+    margin-left: 0;
+    flex-direction: column;      
+}
+
+.home-userName {
+    font-size: 20px;
+    font-weight: bold
+}
+
+.home-content {
     width: 100%;
     overflow: auto;
 }
