@@ -21,15 +21,10 @@
 }
 
 .header img {
-    width: 14vw;
+    width: 28vw;
+    margin: 0 0 0 7rem
 }
 
-.header p {
-    text-align: center;
-    font-weight: 600;
-    color: var(--off-white);
-    margin: 0 0 0 1rem;
-    font-size: 18pt;
-}
+
 
 
