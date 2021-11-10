@@ -1,0 +1,18 @@
+.about-cards {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  margin: 20px 35px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: large;
+  
+}
+
+.about {
+  margin-top: 80px;
+}
+
+.about h1{
+  margin: 10px;
+  
+}
