@@ -21,9 +21,13 @@ body {
     overflow-x: hidden;
 }
 
+p, h1, h2, h3, h4 {
+  color: var(--off-white)
+}
+
 @font-face {
     font-family: 'Consolas';
     src: local(Consolas), url(./assets/consolas.ttf);
-  }
+}
 
 

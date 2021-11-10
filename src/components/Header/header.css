@@ -15,6 +15,9 @@
     width: 100%;
     align-items: center;
     justify-content: start;
+    top:0;
+    left: 0;
+    position: fixed;
 }
 
 .header img {
