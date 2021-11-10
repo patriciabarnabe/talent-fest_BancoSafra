@@ -1,5 +1,9 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import { collection, getDocs } from 'firebase/firestore'
+//import { collection, doc, query, where, getDocs } from 'firebase/firestore'
+import { db } from '../../services/firebase.js'
 
 import "./home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,9 +13,28 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ProgressBar } from "react-bootstrap";
 import Carousel from "../../components/Carousel/Carousel";
 import Navbar from "../../components/Navbar/Navbar"
+import Card from '../../components/Card/Card'
 
 function Home() {
   const percentage = 73;
+
+  // const [articles, setArticles] = useState([])
+  // const articlesCollectionRef = collection(db, 'trilha')
+
+  // useEffect(() => {
+  //   const getArticles = async () => {
+  //     const data = await getDocs(articlesCollectionRef);
+  //     setArticles(data.docs.map((article) => ({ ...article.data(), id: article.id })))
+  //   }
+
+  //   getArticles()
+  //   console.log(articles)
+
+  // }, [])
+
+  // useEffect(() => {
+  //   console.log(articles)
+  // }, [articles])
 
   function clicou() {
     console.log('clicou')
@@ -37,9 +60,7 @@ function Home() {
       <div className='home-content'>
         <section className='section-carousel'>
           <h2 className='title-sugestion-home'> Não vacile, há  <Link className='link-contents' to="/contents">Thilhas para concluir!</Link></h2>
-          <Carousel
-            onClick={clicou}
-          />
+          <Carousel/>
 
         </section>
         <section className='section-carousel'>
@@ -67,3 +88,22 @@ function Home() {
 }
 
 export default Home;
+
+/*{trilha && trilha.map((article) => {
+  return (
+    <Carousel
+      onClick={clicou}
+    >
+      <Card article={article}/>
+    </Carousel>
+  )
+})}*/
+
+// const q = query(collection(db, "trilha"), where("titulo", "==", true));
+
+//     const querySnapshot = await getDocs(q);
+
+//     querySnapshot.forEach((doc) => {
+//       // doc.data() is never undefined for query doc snapshots
+//       console.log(doc.id, " => ", doc.data());
+//     });
