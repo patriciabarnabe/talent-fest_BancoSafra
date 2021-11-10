@@ -31,8 +31,8 @@ function Home() {
   //   console.log(articles)
   // }, [articles])
 
-  function clicou() {
-    console.log('clicou')
+  function clicou(e) {
+    console.log('clicou', e)
   }
 
   return (

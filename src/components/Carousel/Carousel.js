@@ -6,10 +6,9 @@ import Card from '../Card/Card';
 
 import './carousel.css'
 
-const Carousel = (docArticle, cardClicked) => {
-
-  const doc = docArticle;
-  const cards = doc.docArticle
+const Carousel = ({docArticle, cardClicked}) => {
+  
+  const cards = docArticle
   console.log(cards)
 
   // const [document, setDocument] = useState([])
@@ -58,7 +57,7 @@ const Carousel = (docArticle, cardClicked) => {
       <div className='carousel' ref={carousel}>
         {cards != [] && cards?.map((card, index) => {
           return (
-            <Card key={index} trilha={card} onClick={() => cardClicked()}
+            <Card key={index} trilha={card} onClick={cardClicked}
             />
           )
         })}
