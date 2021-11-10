@@ -1,44 +1,65 @@
-import React, { useState } from 'react';
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import React, { useState, useEffect, useRef } from 'react';
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from '../../services/firebase'
+
+import Card from '../Card/Card';
 
 import './carousel.css'
 
-const Carousel = ({ slides, uniqueSlide }) => {
-  const [current, setCurrent] = useState(0);
-  const length = slides.length;
+const Carousel = () => {
 
-  const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
+  const [articles, setArticles] = useState([])
+  const articlesCollectionRef = collection(db, 'trilha')
 
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
+  useEffect(() => {
+    const getArticles = async () => {
+      const data = await getDocs(articlesCollectionRef);
+      setArticles(data.docs.map((article) => ({ ...article.data(), id: article.id })))
+    }
 
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
+    getArticles()
+    console.log(articles)
+
+  }, [])
+
+    useEffect(() => {
+    console.log(articles)
+  }, [articles])
+
+ 
+  const carousel = useRef(null)
+
+  const handleLeftClick = (e) => {
+    e.preventDefault()
+    console.log(carousel.current.offsetWidth)
+    carousel.current.scrollLeft -= carousel.current.offsetWidth
+  }
+
+  const handleRightClick = (e) => {
+    e.preventDefault()
+    carousel.current.scrollLeft += carousel.current.offsetWidth
   }
 
   return (
-    <section className='slider'>
-        
-        <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-        <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
-
-      {uniqueSlide && uniqueSlide.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? 'slide active' : 'slide'}
-            key={index}
-          >
-            {index === current && (
-              <img src={slide.image} alt='Imagens da Trilha de Aprendizado' className='image' />
-            )}
-          </div>
-        );
-      })}
+    <section className='container-carousel'>
+      <i className="fas fa-chevron-left" alt='Scroll left'
+        onClick={handleLeftClick}
+      />
+      <div className='carousel' ref={carousel}>
+        {articles?.map((card, index) => {
+          return (
+            <Card key={index} article={card} />
+          )
+        })}
+      </div>
+      <i className="fas fa-chevron-right" alt='Scroll right'
+        onClick={handleRightClick}
+      />
     </section>
-  );
-};
+
+  )
+}
 
 export default Carousel;
+
+

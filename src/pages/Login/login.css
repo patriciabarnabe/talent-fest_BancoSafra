@@ -1,0 +1,181 @@
+.class-button {
+  background: var(--light-pink);
+  color: var(--off-white);
+  border: none;
+  border-radius: 5px;
+  width: 114px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal-container {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  width: 100%;
+  height: 80%;
+  margin-top: 12rem;
+}
+
+form {
+  margin-top: 1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.input-form {
+  background: var(--off-white);
+  height: 3rem;
+  border-radius: 15px !important;
+  background-color: var(--off-white);
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: var(--dark-blue);
+  border-radius: 15px !important;
+}
+.input-group input {
+  width: 100%;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 15px !important;
+  background-color: var(--off-white);
+  border: 0.125rem solid var(--off-white);
+}
+
+
+
+/* .triangulo-para-cima{
+    width: 0; 
+    height: 0; 
+    border-left: 300px solid transparent;
+    border-right: 390px solid transparent;
+    border-top: 500px solid var(--dark-blue);
+    transform: rotate(153deg);
+  }
+  
+  .zindex{
+    position: relative;
+    z-index: 10;
+    margin-top: -918px;
+    margin-left: -272px;
+  }
+  
+  .caixa{
+    position: relative;
+    width: 50%;
+    display: inline-block;
+  }
+  
+  .photo{
+    display: block;
+    height: auto;
+    margin-top: -4rem;
+  } */
+
+/* .polygon {
+    width: 24rem;
+    height: 10rem;
+    z-index: 0;
+    position: relative;
+  }
+
+  .photo-profile {
+    margin-top: -5rem;
+  }*/
+
+.btn-login {
+  position: relative;
+  top: 22rem;
+  font-weight: 700;
+}
+
+.geral {
+  background-image: url("../../assets/login.png");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  /* position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10; */
+}
+
+.logo-safra {
+  width: 6rem;
+  height: 8rem;
+  margin: 1rem 2rem;
+}
+
+.goback {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  top: 18.5rem;
+  left: 2rem;
+}
+
+.title-login {
+  font-weight: 700;
+  color: var(--dark-blue)
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.google-btn {
+  background:transparent;
+  border:none;
+  outline:none;
+  cursor:pointer;
+}
+
+.clean-button {
+  background:transparent;
+  border:none;
+  outline: none;
+  cursor:pointer;
+  font-weight: 600;
+  margin-left: 0.2rem;
+  color: var(--dark-blue);
+  font-size: 0.8rem;
+}
+
+.login-btn {
+  padding: 1rem 9rem 1rem 5rem;
+  border-radius: 25px;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.span-login {
+  font-size: 0.8rem;
+}
+
+.cadastro-btn{
+  padding: 1rem 9rem 1rem 5rem;
+  border-radius: 25px;
+  margin-left: 2.5rem;
+}

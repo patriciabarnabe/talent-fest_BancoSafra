@@ -1,29 +1,32 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
 
 :root {
     --light-blue: #54C5D9;
     --dark-blue: #00003C;
-    --light-pink: #F54858;
+    --light-pink: #F54868;
     --dark-pink: #B4093E;
-    --pff-white: #F8FFFF;
+    --off-white: #F8FFFF;
     --black: #000000;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     width: 100vw;
-    height: 100vh;
+    height: 70vh;
     background-color: var(--dark-blue);
     overflow-x: hidden;
+}
+
+p, h1, h2, h3, h4 {
+  color: var(--off-white)
 }
 
 @font-face {
     font-family: 'Consolas';
     src: local(Consolas), url(./assets/consolas.ttf);
-  }
-
+}
 

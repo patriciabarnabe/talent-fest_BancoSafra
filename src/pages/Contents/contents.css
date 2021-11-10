@@ -1,0 +1,29 @@
+.button-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4rem;
+    top:1rem;
+    left: 0;
+    position: fixed;
+}
+
+.button-container button {
+    border: none;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-weight: 700;
+    padding: 0.5rem 4.15rem 0.5rem 4.15rem;
+    cursor: pointer;
+}
+
+.button-article:active {
+    background-color: #FFA0AA;
+}
+
+.button-about {
+    background-color: #FFA0AA;
+}
+
+.button-about:active {
+    background-color: white;
+}
