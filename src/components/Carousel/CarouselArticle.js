@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../services/firebase";
+// import { collection, getDocs } from "firebase/firestore";
+// import { db } from "../../services/firebase";
 import CardArticle from "../Card/CardArticle";
 import "./carousel.css";
 
@@ -32,12 +32,13 @@ const CarouselArticle = ({ arrayConteudoSlides }) => {
             <>
               <CardArticle article={item} />
               <p>
-                {index[index.length - 1]
-                  ? <button className="class-button"> Finalizar </button>
-                  : ""}
+                
               </p>
             </>
           ))}
+          {[arrayConteudoSlides.length - 1]
+                  ? <button className="class-button"> Finalizar </button>
+                  : ""}
         </div>
         <i
           className="fas fa-chevron-right"
