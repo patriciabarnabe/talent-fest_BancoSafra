@@ -133,7 +133,7 @@ O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimento
 
 ---
 
-## :woman_technologist: Sobre as desenvolvedoras
+## :woman_technologist: Sobre as Desenvolvedoras
 
 * ### [Carmen Gozza](https://www.linkedin.com/in/carmen-emilia-gozza/)
 
