@@ -6,7 +6,7 @@ import Notification from "../Notificaton/notification";
 const CarouselArticle = ({ arrayConteudoSlides }) => {
   const carousel = useRef(null);
   const [open, setOpen]= useState(false)
-
+  const [buttonState, setButtonState] = useState(true);
   const handleLeftClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
@@ -16,6 +16,18 @@ const CarouselArticle = ({ arrayConteudoSlides }) => {
     e.preventDefault();
     carousel.current.scrollLeft += carousel.current.offsetWidth;
   };
+
+  const hideAlert = () => {
+    setTimeout(() => setOpen(false), 5000)
+    setButtonState(false)
+  } 
+  const logicaButton = (arr) => {
+    if (buttonState){
+      return [arr.length - 1]
+        ?<button className="class-button button-finish-article" onClick={() => {setOpen(true); hideAlert();}}> Finalizar </button>
+        : "";
+    }
+  } 
 
   return (
     <>
@@ -34,12 +46,12 @@ const CarouselArticle = ({ arrayConteudoSlides }) => {
               </p>
             </div>
           ))}
-          {[arrayConteudoSlides.length - 1]
-                  ? <button className="class-button" onClick={() => setOpen(true)}> Finalizar </button>
-                  : ""}
+        
+        {logicaButton(arrayConteudoSlides)}
+    
         </div>
         
-        {open && < Notification type="sucess" conteudo="Parabéns! Você completou a trilha."/>}
+        {open && < Notification type="success" conteudo="Parabéns! Você completou a trilha."/>}
         <i
           className="fas fa-chevron-right"
           alt="Scroll right"

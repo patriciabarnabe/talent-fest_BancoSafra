@@ -11,15 +11,27 @@
     overflow-x: auto;
     scroll-behavior: smooth;   
     box-sizing: border-box; 
- 
+    align-items: center;
 }
 
 .container-carousel-article{
-    margin-top: -116px;
+    margin-top: -63px;
 }
 .fa-chevron-left, .fa-chevron-right {
     font-size: 60px;
     color: #54C5D9;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.308);
+}
+
+.button-finish-article{
+    width: 150px;
+  height: 200px;
+  margin-left: 10px;
+}
+
+.container-carousel-article .alert{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
 }

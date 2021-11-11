@@ -54,53 +54,52 @@ const Article = () => {
       <div>
         <Header />
 
-        <h1>Article: {id} </h1>
+      {trilha &&
+        trilha.map((article, index) => {
+          console.log(article);
+          return (
+            <div key={index} className="article">
+              <div className="article-page">
+                <section className="title-article">
+                  <h2>{article.titulo}</h2>
+                  <h5>{article.autora}</h5>
+                </section>
+                <CarouselArticle arrayConteudoSlides={article} />
+              </div>
+              {/* <Button children='likes' /> */}
+              <div className="icons-card">
+                <i className="far fa-bookmark"></i>
+                <i className="far fa-heart" onClick={() => likeArticle()}>
+                  <span className="number-likes">{article.likes}</span>
+                </i>
+                <section className="button-article">
+                  {shareButton === true ? (
+                    <div className="icon-article">
+                      <Button
+                        value={shareButton}
+                        onClick={setIsShareButton}
+                        className="icon-article"
+                      >
+                        {" "}
+                        <i class="fas fa-share-alt"></i>
+                      </Button>
+                    </div>
+                  ) : (
+                    <div className="input-group s">
+                      <input
+                        type="text"
+                        value={share}
+                        onChange={(e) => setShare(e.target.value)}
+                      ></input>
+                      <CopyToClipboard text={share}>
+                     
+                        <i class="far fa-copy"></i>
+                        
+                      </CopyToClipboard>
+                    </div>
+                  )}
+                </section>
 
-        {trilha &&
-          trilha.map((article, index) => {
-            return (
-              <div key={index} className="article">
-                <div className="article-page">
-                  <section className="title-article">
-                    <h2>{article.titulo}</h2>
-                    <h5>{article.autora}</h5>
-                  </section>
-                  <CarouselArticle arrayConteudoSlides={article} />
-                </div>
-                {/* <Button children='likes' /> */}
-                <div className="icons-card">
-                  <i className="far fa-bookmark"></i>
-                  <i className="far fa-heart" onClick={() => likeArticle()}>
-                    <span className="number-likes">{article.likes}</span>
-                  </i>
-                  <section className="button-article">
-                    {shareButton === true ? (
-                      <div className="icon-article">
-                        <Button
-                          value={shareButton}
-                          onClick={setIsShareButton}
-                          className="icon-article"
-                        >
-                          {" "}
-                          <i class="fas fa-share-alt"></i>
-                        </Button>
-                      </div>
-                    ) : (
-                      <div className="input-group s">
-                        <input
-                          type="text"
-                          value={share}
-                          onChange={(e) => setShare(e.target.value)}
-                        ></input>
-                        <CopyToClipboard text={share}>
-                          <button>
-                            <i class="far fa-copy"></i>
-                          </button>
-                        </CopyToClipboard>
-                      </div>
-                    )}
-                  </section>
-                </div>
               </div>
             );
           })}
