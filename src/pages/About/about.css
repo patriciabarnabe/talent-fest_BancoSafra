@@ -53,3 +53,11 @@
 .button-about:active {
   background-color: white;
 }
+
+.title-sugestion-about{
+  margin-top: 36%;
+}
+
+.card-about{
+  margin-bottom: 300px;
+}

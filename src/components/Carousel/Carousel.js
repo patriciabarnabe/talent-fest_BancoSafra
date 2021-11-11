@@ -51,7 +51,7 @@ const Carousel = ({docArticle, cardClicked}) => {
   }
 
   return (
-    <section className='container-carousel'>
+    <section className='container-carousel '>
       <i className="fas fa-chevron-left" alt='Scroll left'
         onClick={handleLeftClick}
       />

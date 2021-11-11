@@ -3,7 +3,9 @@ import Header from '../../components/Header/Header';
 import Carousel from '../../components/Carousel/Carousel'
 import Button from '../../components/Button/button';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import { collection,  getDocs } from 'firebase/firestore'
+import { db } from '../../services/firebase.js'
 import './about.css';
 
 
@@ -12,6 +14,21 @@ const About = () => {
   const [tab, setTab] = useState('article');
   const handleTab = (tabSelect) =>{
     setTab(tabSelect)
+  }
+
+  const [articles, setArticles] = useState([])
+  const articlesCollectionRef = collection(db, 'trilha')
+
+  useEffect(() => {
+    const getArticles = async () => {
+      const data = await getDocs(articlesCollectionRef);
+      setArticles(data.docs.map((article) => ({ ...article.data(), id: article.id })))
+    }
+    getArticles()  
+  }, [])
+
+  function clicou(e) {
+    console.log('clicou', e)
   }
 
   return (
@@ -31,9 +48,23 @@ const About = () => {
       </div>
       <section className='container-public'>
         
-        {tab === 'article'
- && 
-          <Carousel />
+        {tab === 'article' && 
+        <>
+          <section className='section-carousel'>
+          <h2 className='title-sugestion-about'> Para prosperar, <Link className='link-contents' to="/contents">Recomendados para você ;)</Link></h2>
+          {articles != [] && <Carousel docArticle={articles} 
+          cardClicked={clicou}
+          />}
+          </section>
+        <section className='section-carousel'>
+          <h2 className='title-sugestion-home'> Você vai transformar o mundo, então  <Link className='link-contents' to="/contents">Descubra novos conteúdos!</Link></h2>
+          {articles != [] && <Carousel docArticle={articles} 
+          cardClicked={clicou}
+          />}
+
+        </section>
+        </>
+        
         }
         {tab === 'about' && 
         <>
