@@ -88,6 +88,7 @@ O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimento
 ├── 📁public
 |
 ├── 📁src
+|   |
 |   ├── 📁assets
 |   |
 |   ├── 📁components
@@ -97,7 +98,7 @@ O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimento
 |   |   ├── 📁FlipCard
 |   |   ├── 📁Header
 |   |   ├── 📁Input
-|   |   ├── 📁Mdal
+|   |   ├── 📁Modal
 |   |   └── 📁Navbar 
 |   |
 |   ├── 📁pages
@@ -113,7 +114,7 @@ O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimento
 |   |
 |   ├── 📁services 
 |   |
-|   ├── 📄global.scss
+|   ├── 📄global.css
 |   └── 📄index.js
 |   
 ├── 📄README.md
