@@ -7,6 +7,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/button.js';
 import CarouselArticle from "../../components/Carousel/CarouselArticle";
 import CopyToClipboard from 'react-copy-to-clipboard';
+import './article.css'
 
 const Article = () => {
   const [trilha, setTrilha] = useState([])
@@ -49,20 +50,21 @@ const Article = () => {
 
   return (
 
-    <div>
+    <div >
       <Header />
-
-      <h1>Oi</h1>
 
       {trilha && trilha.map((article, index) => {
         console.log(article)
         return (
-          <div key={index}>
-            <div>
-              <div>{article.titulo}</div>
-              <div>{article.autora}</div>
+          <div key={index} className='article'>
+            <div className='article-page'>
+              <section className='title-article'>
+                <div>{article.titulo}</div>
+                <div>{article.autora}</div>
+              </section>
               <CarouselArticle arrayConteudoSlides={article} />
             </div>
+            
             <Button children='likes' onClick={() => likeArticle()} />
             <div className='icons-card'>
               <i className="far fa-bookmark"></i>
@@ -72,15 +74,17 @@ const Article = () => {
           </div>
         )
       })}
-      {shareButton === true ? (<div className='icon-article'><Button value={shareButton} onClick={setIsShareButton} className='icon-article'> <i class="fas fa-share-alt"></i></Button></div>
-      ):
-        <div className='input-group s'>
-          <input type='text' value={share} onChange={e => setShare(e.target.value)}></input>
-          <CopyToClipboard text={share}>
-            <button><i class="far fa-copy"></i></button>
-          </CopyToClipboard>
-        </div>
-      }
+      <section className='button-article'>
+        {shareButton === true ? (<div className='icon-article'><Button value={shareButton} onClick={setIsShareButton} className='icon-article'> <i class="fas fa-share-alt"></i></Button></div>
+        ):
+          <div className='input-group s'>
+            <input type='text' value={share} onChange={e => setShare(e.target.value)}></input>
+            <CopyToClipboard text={share}>
+              <button><i class="far fa-copy"></i></button>
+            </CopyToClipboard>
+          </div>
+        }
+      </section>
       <Navbar />
     </div>
   )

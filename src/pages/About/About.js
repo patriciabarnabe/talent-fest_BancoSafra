@@ -81,64 +81,54 @@ const About = () => {
           <div>
             <section className='section-carousel'>
               <h2 className='title-sugestion-home'> Mana, se está chegando agora <Link className='link-contents' to="/contents"> Comece por aqui!</Link></h2>
-              {beginner != [] && beginner.map((card) => {
-                return (
+              {beginner != [] && 
                   <Carousel docArticle={beginner}
                     cardClicked={clicou}
                   />
-                )
-              })
               }
             </section>
 
             <section className='section-carousel'>
               <h2 className='title-sugestion-home'> Se já tem um cofrinho, <Link className='link-contents' to="/contents"> estes são para você:</Link></h2>
-              {intermediate != [] && intermediate.map((card) => {
-                return (
+              {intermediate != [] && 
                   <Carousel docArticle={intermediate}
                     cardClicked={clicou}
                   />
-                )
-              })
               }
             </section>
 
             <section className='section-carousel'>
               <h2 className='title-sugestion-home'><Link className='link-contents' to="/contents">Para as patroas:</Link></h2>
-              {advanced != [] && advanced.map((card) => {
-                return (
+              {advanced != [] && 
                   <Carousel docArticle={advanced}
                     cardClicked={clicou}
                   />
-                )
-              })
               }
             </section>
 
             <section className='section-carousel'>
               <h2 className='title-sugestion-home'><Link className='link-contents' to="/contents">Favoritos das amigas:</Link></h2>
-              {favorites != [] && favorites.map((card) => {
-                return (
+              {favorites != [] && 
                   <Carousel docArticle={favorites}
                     cardClicked={clicou}
                   />
-                )
-              })
               }
             </section>
           </div>
         }
         {tab === 'about' &&
           <>
-            <article >
-              <h1>Sobre nós</h1>
-              <p className='about-cards'>O portal "Menina de Vila", é um projeto de educação Financeira e Investimentos ligado ao Grupo Safra. Ele foi "criado por, e para, Mulheres”, seu principal objetivo é simplificar a linguagem do mercado financeiro, através de conteúdos sobre educação financeira para as meninas que não possuem acesso as informações na linguagem da periferia.</p>
-            </article>
-            <article>
-              <h1>Nossa história</h1>
-              <p className='about-cards'>Nascemos da indignação construtiva e do desejo de criar um movimento voltado para transformação das comunidades, pois sonhamos com um mundo onde todas possam ter as mesmas oportunidades.<br />
-                <strong>Faça parte você também deste movimento, acredite que o amanhã pode sim, ser a realização dos nossos sonhos, bora escrever história!</strong></p>
-            </article>
+            <section >
+              <article >
+                <h1>Sobre nós</h1>
+                <p className='about-cards'>O portal "Menina de Vila", é um projeto de educação Financeira e Investimentos ligado ao Grupo Safra. Ele foi "criado por, e para, Mulheres”, seu principal objetivo é simplificar a linguagem do mercado financeiro, através de conteúdos sobre educação financeira para as meninas que não possuem acesso as informações na linguagem da periferia.</p>
+              </article>
+              <article className='about-us'>
+                <h1>Nossa história</h1>
+                <p className='about-cards'>Nascemos da indignação construtiva e do desejo de criar um movimento voltado para transformação das comunidades, pois sonhamos com um mundo onde todas possam ter as mesmas oportunidades.<br />
+                  <strong>Faça parte você também deste movimento, acredite que o amanhã pode sim, ser a realização dos nossos sonhos, bora escrever história!</strong></p>
+              </article>
+            </section>
           </>
         }
       </section>

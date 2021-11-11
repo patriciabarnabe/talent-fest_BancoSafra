@@ -6,3 +6,13 @@
 .article{
   margin-top: 50px;
 }
+
+.article-page{
+  width: 100%;
+  height: 420px;
+}
+
+.button-article{
+  display:flex;
+  flex-direction: column;
+}

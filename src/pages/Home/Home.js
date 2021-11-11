@@ -77,7 +77,7 @@ function Home() {
           />}
 
         </section>
-        <section className='section-carousel'>
+        <section className='section-carousel-home'>
           <h2 className='title-sugestion-home'> Você vai transformar o mundo, então  <Link className='link-contents' to="/contents">Descubra novos conteúdos!</Link></h2>
           {articles != [] && <Carousel docArticle={articles} 
           cardClicked={clicou}

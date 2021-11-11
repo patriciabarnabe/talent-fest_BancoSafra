@@ -1,11 +1,10 @@
 .about-cards {
   background-color: var(--light-blue);
   color: var(--dark-blue);
-  margin-bottom: 30px;
   padding: 20px;
   border-radius: 10px;
   font-size: large;
-  margin-top: 100px;
+  margin: 20px 45px 30px 45px;
 }
 
 .about {
@@ -65,4 +64,12 @@
 
 .card-about{
   margin-bottom: 300px;
+}
+
+.container-public{
+  margin-top: 41%;
+}
+
+.about-us{
+  height: 600px;
 }

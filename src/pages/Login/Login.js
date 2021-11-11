@@ -126,7 +126,7 @@ function Login() {
         </button>
       </form>
 
-      <Link to="/home">
+      <Link to="/">
         <img src={GoBack} alt="Seta de voltar" className="goback" />
       </Link>
 
