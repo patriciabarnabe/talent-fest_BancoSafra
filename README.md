@@ -60,10 +60,10 @@ O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimento
   <img alt="prototipo2" height="580" width="350" src="./src/assets/prototipo-alta2.png"><br><br>
   <img alt="prototipo3" height="580" width="350" src="./src/assets/prototipo-alta3.png">
   <img alt="prototipo4" height="580" width="350" src="./src/assets/prototipo-alta4.png"><br><br>
-  <img alt="prototipo5" height="580" width="230" src="./src/assets/prototipo-alta5.png">
-  <img alt="prototipo6" height="580" width="230" src="./src/assets/prototipo-alta6.png">
-  <img alt="prototipo7" height="580" width="230" src="./src/assets/prototipo-alta7.png">
-  <img alt="prototipo8" height="580" width="230" src="./src/assets/prototipo-alta8.png"><br><br>
+  <img alt="prototipo5" height="580" width="250" src="./src/assets/prototipo-alta5.png">
+  <img alt="prototipo6" height="580" width="250" src="./src/assets/prototipo-alta6.png">
+  <img alt="prototipo7" height="580" width="250" src="./src/assets/prototipo-alta7.png">
+  <img alt="prototipo8" height="580" width="250" src="./src/assets/prototipo-alta8.png"><br><br>
 </div>
 
 ---
