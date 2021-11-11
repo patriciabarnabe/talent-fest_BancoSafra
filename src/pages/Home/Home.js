@@ -60,7 +60,7 @@ function Home() {
           {articles != [] && <Carousel docArticle={articles} 
           cardClicked={clicou}
           />}
-          
+
 
         </section>
         <section className='section-carousel'>
