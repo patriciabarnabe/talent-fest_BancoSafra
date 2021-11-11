@@ -3,9 +3,11 @@ import Header from '../../components/Header/Header';
 import Carousel from '../../components/Carousel/Carousel'
 import Button from '../../components/Button/button';
 import { Link } from 'react-router-dom';
-import { useState,useEffect } from 'react';
-import { collection,  getDocs } from 'firebase/firestore'
+import { useState, useEffect } from "react";
+
+import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../../services/firebase.js'
+
 import './about.css';
 
 
@@ -54,17 +56,6 @@ const About = () => {
     setTab(tabSelect)
   }
 
-  const [articles, setArticles] = useState([])
-  const articlesCollectionRef = collection(db, 'trilha')
-
-  useEffect(() => {
-    const getArticles = async () => {
-      const data = await getDocs(articlesCollectionRef);
-      setArticles(data.docs.map((article) => ({ ...article.data(), id: article.id })))
-    }
-    getArticles()  
-  }, [])
-
   function clicou(e) {
     console.log('clicou', e)
   }
@@ -85,24 +76,57 @@ const About = () => {
 
       </div>
       <section className='container-public'>
-        
-        {tab === 'article' && 
-        <>
-          <section className='section-carousel'>
-          <h2 className='title-sugestion-about'> Para prosperar, <Link className='link-contents' to="/contents">Recomendados para você ;)</Link></h2>
-          {articles != [] && <Carousel docArticle={articles} 
-          cardClicked={clicou}
-          />}
-          </section>
-        <section className='section-carousel'>
-          <h2 className='title-sugestion-home'> Você vai transformar o mundo, então  <Link className='link-contents' to="/contents">Descubra novos conteúdos!</Link></h2>
-          {articles != [] && <Carousel docArticle={articles} 
-          cardClicked={clicou}
-          />}
 
-        </section>
-        </>
-        
+        {tab === 'article' &&
+          <div>
+            <section className='section-carousel'>
+              <h2 className='title-sugestion-home'> Mana, se está chegando agora <Link className='link-contents' to="/contents"> Comece por aqui!</Link></h2>
+              {beginner != [] && beginner.map((card) => {
+                return (
+                  <Carousel docArticle={beginner}
+                    cardClicked={clicou}
+                  />
+                )
+              })
+              }
+            </section>
+
+            <section className='section-carousel'>
+              <h2 className='title-sugestion-home'> Se já tem um cofrinho, <Link className='link-contents' to="/contents"> estes são para você:</Link></h2>
+              {intermediate != [] && intermediate.map((card) => {
+                return (
+                  <Carousel docArticle={intermediate}
+                    cardClicked={clicou}
+                  />
+                )
+              })
+              }
+            </section>
+
+            <section className='section-carousel'>
+              <h2 className='title-sugestion-home'><Link className='link-contents' to="/contents">Para as patroas:</Link></h2>
+              {advanced != [] && advanced.map((card) => {
+                return (
+                  <Carousel docArticle={advanced}
+                    cardClicked={clicou}
+                  />
+                )
+              })
+              }
+            </section>
+
+            <section className='section-carousel'>
+              <h2 className='title-sugestion-home'><Link className='link-contents' to="/contents">Favoritos das amigas:</Link></h2>
+              {favorites != [] && favorites.map((card) => {
+                return (
+                  <Carousel docArticle={favorites}
+                    cardClicked={clicou}
+                  />
+                )
+              })
+              }
+            </section>
+          </div>
         }
         {tab === 'about' &&
           <>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { collection, getDocs } from 'firebase/firestore'
-import { db } from '../../Services/firebase.js'
+import { db } from '../../services/firebase.js'
 import CardArticle from '../Card/CardArticle';
 import './carousel.css'
 

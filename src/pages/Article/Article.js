@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { onSnapshot, getDoc, doc, updateDoc } from 'firebase/firestore'
-import { db } from '../../Services/firebase.js'
+import { db } from '../../services/firebase.js'
 import Header from '../../components/Header/Header';
 import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/button.js';
