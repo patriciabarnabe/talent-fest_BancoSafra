@@ -20,4 +20,19 @@
 .icons-card{
   display:flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #f54868;
+}
+
+.number-likes {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 0.5rem;
+}
+
+.icon-article{
+  background-color: transparent;
+  border:none;
+  color:#f54868;
+  width:max-content
 }
