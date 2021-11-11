@@ -12,7 +12,7 @@
 
 .card {
   position: relative;
-  width: 290px;
+  width: 150px;
   height: 200px;
   margin: 0 auto;
   background: #f8ffff;
@@ -91,4 +91,18 @@
 .card .face.face2 {
   background: #b4093e;
   border-radius: 15px;
+}
+
+.container-card{
+  margin-top: 20%;
+}
+
+.card-article{
+  position: relative;
+  width: 300px;
+  height: 280px;
+  margin: 0 auto;
+  background: #f8ffff;
+  border-radius: 15px;
+  overflow: auto;
 }
