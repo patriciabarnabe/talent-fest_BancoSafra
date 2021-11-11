@@ -80,3 +80,10 @@
     font-size: 2rem;
     margin-left: 1rem;
 }
+
+.container-article{
+    background: var(--light-blue);
+    color: var(--dark-blue);
+    height: 10rem;
+    width: 10rem;
+}
