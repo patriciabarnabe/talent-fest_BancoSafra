@@ -9,10 +9,15 @@
 
 .article-page{
   width: 100%;
-  height: 420px;
+  height: 440px;
 }
 
 .button-article{
   display:flex;
   flex-direction: column;
+}
+
+.icons-card{
+  display:flex;
+  flex-direction: row;
 }

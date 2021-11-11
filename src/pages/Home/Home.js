@@ -11,6 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ProgressBar } from "react-bootstrap";
 import Carousel from "../../components/Carousel/Carousel";
 import Navbar from "../../components/Navbar/Navbar"
+import profile from '../../assets/foto-perfil.png'
 
 
 function Home() {
@@ -41,7 +42,7 @@ function Home() {
     <div className="conteiner-home">
       <section className='home-profile'>
         <img className='image-user-home'
-          src='https://cdn.icon-icons.com/icons2/1560/PNG/512/3430602-avatar-female-pretty-profile-user-woman_107555.png'
+          src={profile}
           alt="user-home"
         />
         <div className='home-userInfo'>
