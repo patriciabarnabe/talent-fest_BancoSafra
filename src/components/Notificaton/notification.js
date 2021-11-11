@@ -6,7 +6,7 @@ const Notification = ({ type, conteudo }) => {
 const  [show, setshow] = useState(true)
     
     return (
-        <Alert variant={type}>{conteudo}</Alert>
+        <Alert variant={"danger"}>{conteudo}</Alert>
     )
   }
   
