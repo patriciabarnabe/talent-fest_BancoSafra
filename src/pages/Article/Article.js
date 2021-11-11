@@ -8,15 +8,14 @@ import Button from "../../components/Button/button.js";
 import CarouselArticle from "../../components/Carousel/CarouselArticle";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useParams } from "react-router-dom";
-import ResponsiveAlert from "./../../components/ResponsiveAlert/ResponsiveAlert";
-import "./article.css";
+import ResponsiveAlert from "./../../components/ResponsiveAlert/ResponsiveAlert"
 
+import "./article.css";
 const Article = () => {
   const [trilha, setTrilha] = useState([]);
-  const [share, setShare] = useState("Conheça nossa pagina");
+  const [share, setShare] = useState("Copiar");
   const [shareButton, setIsShareButton] = useState(true);
   const { id } = useParams();
-
   useEffect(() => {
     onSnapshot(doc(db, "trilha", id), (doc) => {
       const newArray = [];
@@ -31,7 +30,6 @@ const Article = () => {
       setTrilha(newArray);
     });
   }, []);
-
   const likeArticle = async () => {
     const trilhas = doc(db, "trilha", id);
     const esperandoGetDocs = getDoc(trilhas);
@@ -40,20 +38,19 @@ const Article = () => {
         likes: docTrilha.data().likes,
       };
       const addLike = (obj.likes += 1);
+      console.log(addLike);
       updateDoc(trilhas, {
         likes: addLike,
       });
       return addLike;
     });
   };
-
   return (
-    <>
+    <div>
       <ResponsiveAlert />
 
-      <div>
-        <Header />
-
+      <Header />
+      <h1>Article: {id} </h1>
       {trilha &&
         trilha.map((article, index) => {
           console.log(article);
@@ -92,22 +89,17 @@ const Article = () => {
                         onChange={(e) => setShare(e.target.value)}
                       ></input>
                       <CopyToClipboard text={share}>
-                     
                         <i class="far fa-copy"></i>
-                        
                       </CopyToClipboard>
                     </div>
                   )}
                 </section>
-
               </div>
-            );
-          })}
-
-        <Navbar />
-      </div>
-    </>
+            </div>
+          );
+        })}
+      <Navbar />
+    </div>
   );
 };
-
 export default Article;
