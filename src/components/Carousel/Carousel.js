@@ -1,30 +1,40 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { collection, getDocs } from 'firebase/firestore'
-import { db } from '../../services/firebase'
+// import { collection, getDocs } from 'firebase/firestore'
+// import { db } from '../../services/firebase'
 
-import Card from '../Card/Card';
+// import Card from '../Card/Card';
+import FlipCard from "../../components/FlipCard/FlipCard.js";
 
 import './carousel.css'
 
-const Carousel = () => {
+const Carousel = ({docArticle, cardClicked}) => {
+  
+  const cards = docArticle
+  console.log(cards)
 
-  const [articles, setArticles] = useState([])
-  const articlesCollectionRef = collection(db, 'trilha')
+  // const [document, setDocument] = useState([])
+  // //const articlesCollectionRef = collection(db, 'trilha')
 
-  useEffect(() => {
-    const getArticles = async () => {
-      const data = await getDocs(articlesCollectionRef);
-      setArticles(data.docs.map((article) => ({ ...article.data(), id: article.id })))
-    }
+  // setDocument([...cards])
 
-    getArticles()
-    console.log(articles)
+  // useEffect(() => {
+  //   const getArticles = async () => {
+  //     const data = await getDocs(articlesCollectionRef);
+  //     setArticles(data.docs.map((article) => ({ ...article.data(), id: article.id })))
+  //   }
 
-  }, [])
+  //   getArticles()
+  //   console.log()
 
-    useEffect(() => {
-    console.log(articles)
-  }, [articles])
+  // }, [])
+
+  //   useEffect(() => {
+  //   console.log(document)
+  // }, [document])
+
+  function clicou() {
+    console.log('clicou')
+  }
 
  
   const carousel = useRef(null)
@@ -46,9 +56,11 @@ const Carousel = () => {
         onClick={handleLeftClick}
       />
       <div className='carousel' ref={carousel}>
-        {articles?.map((card, index) => {
+        {cards != [] && cards?.map((card, index) => {
           return (
-            <Card key={index} article={card} />
+            <FlipCard key={index} trilha={card} 
+            onClick={cardClicked}
+            />
           )
         })}
       </div>

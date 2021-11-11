@@ -2,6 +2,7 @@
     height: 100%;   
     width: 100%;
     box-sizing: border-box;
+    margin-top: 100px;
 }
 
 .home-profile {
@@ -66,4 +67,16 @@
 .title-sugestion-home {
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.fa-copy {
+    margin-left: 20rem;
+}
+
+.icon-article {
+    color: var(--light-blue);
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    margin-left: 1rem;
 }
