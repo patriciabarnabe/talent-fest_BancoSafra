@@ -20,7 +20,7 @@ export const Rotas = () => {
       <Route path="*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/contents" element={<Contents />} />
+      {/* <Route path="/contents" element={<Contents />} /> */}
       <Route path="/" element={<About />} />
 
       <Route path="/trail/:id" element={<Trail />} /> 
