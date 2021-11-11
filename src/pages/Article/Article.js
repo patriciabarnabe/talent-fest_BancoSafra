@@ -72,6 +72,7 @@ const Article = () => {
                         <Button  children='likes' onClick={() => likeArticle()}/>
                         <div>{article.likes}</div>
                     </div> 
+                    
                 )
             })}    
             
@@ -80,5 +81,7 @@ const Article = () => {
         </div>
     )
 }
+
+
 
 export default Article;
