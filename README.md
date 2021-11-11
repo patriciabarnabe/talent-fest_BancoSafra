@@ -124,10 +124,10 @@ O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimento
 ## ✔️ Resultados
 
 <div style="display: flex" align="center">
-  <img align="center" alt="gif-cadastro" height="600" width="800" src="./src/img/gif-cadastro.gif"><br><br>
-  <img align="center" alt="gif-carrinho" height="600" width="800" src="./src/img/gif-carrinho.gif"><br><br>
-  <img align="center" alt="gif-pedidos" height="600" width="800" src="./src/img/gif-pedidos.gif"><br><br>
-  <img align="center" alt="gif-status" height="600" width="800" src="./src/img/gif-status.gif">
+  <img align="center" alt="resultado-gif1" height="600" width="800" src="./src/img/gif-cadastro.gif"><br><br>
+  <img align="center" alt="resultado-gif2" height="600" width="800" src="./src/img/gif-carrinho.gif"><br><br>
+  <img align="center" alt="resultado-gif3" height="600" width="800" src="./src/img/gif-pedidos.gif"><br><br>
+  <img align="center" alt="resultado-gif4" height="600" width="800" src="./src/img/gif-status.gif">
 </div>
 
 ---
