@@ -60,46 +60,6 @@ form {
 }
 
 
-
-/* .triangulo-para-cima{
-    width: 0; 
-    height: 0; 
-    border-left: 300px solid transparent;
-    border-right: 390px solid transparent;
-    border-top: 500px solid var(--dark-blue);
-    transform: rotate(153deg);
-  }
-  
-  .zindex{
-    position: relative;
-    z-index: 10;
-    margin-top: -918px;
-    margin-left: -272px;
-  }
-  
-  .caixa{
-    position: relative;
-    width: 50%;
-    display: inline-block;
-  }
-  
-  .photo{
-    display: block;
-    height: auto;
-    margin-top: -4rem;
-  } */
-
-/* .polygon {
-    width: 24rem;
-    height: 10rem;
-    z-index: 0;
-    position: relative;
-  }
-
-  .photo-profile {
-    margin-top: -5rem;
-  }*/
-
 .btn-login {
   position: relative;
   top: 22rem;
@@ -111,10 +71,6 @@ form {
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  /* position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10; */
 }
 
 .logo-safra {

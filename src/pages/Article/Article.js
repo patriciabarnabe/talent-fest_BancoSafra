@@ -8,6 +8,7 @@ import Button from "../../components/Button/button.js";
 import CarouselArticle from "../../components/Carousel/CarouselArticle";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useParams } from "react-router-dom";
+import ResponsiveAlert from "./../../components/ResponsiveAlert/ResponsiveAlert";
 import "./article.css";
 
 const Article = () => {
@@ -39,7 +40,6 @@ const Article = () => {
         likes: docTrilha.data().likes,
       };
       const addLike = (obj.likes += 1);
-      console.log(addLike);
       updateDoc(trilhas, {
         likes: addLike,
       });
@@ -48,66 +48,67 @@ const Article = () => {
   };
 
   return (
-    <div>
-      <Header />
+    <>
+      <ResponsiveAlert />
 
-      <h1>Article: {id} </h1>
+      <div>
+        <Header />
 
-      {trilha &&
-        trilha.map((article, index) => {
-          console.log(article);
-          return (
-            <div key={index} className="article">
-              <div className="article-page">
-                <section className="title-article">
-                  <h2>{article.titulo}</h2>
-                  <h5>{article.autora}</h5>
-                </section>
-                <CarouselArticle arrayConteudoSlides={article} />
+        <h1>Article: {id} </h1>
+
+        {trilha &&
+          trilha.map((article, index) => {
+            return (
+              <div key={index} className="article">
+                <div className="article-page">
+                  <section className="title-article">
+                    <h2>{article.titulo}</h2>
+                    <h5>{article.autora}</h5>
+                  </section>
+                  <CarouselArticle arrayConteudoSlides={article} />
+                </div>
+                {/* <Button children='likes' /> */}
+                <div className="icons-card">
+                  <i className="far fa-bookmark"></i>
+                  <i className="far fa-heart" onClick={() => likeArticle()}>
+                    <span className="number-likes">{article.likes}</span>
+                  </i>
+                  <section className="button-article">
+                    {shareButton === true ? (
+                      <div className="icon-article">
+                        <Button
+                          value={shareButton}
+                          onClick={setIsShareButton}
+                          className="icon-article"
+                        >
+                          {" "}
+                          <i class="fas fa-share-alt"></i>
+                        </Button>
+                      </div>
+                    ) : (
+                      <div className="input-group s">
+                        <input
+                          type="text"
+                          value={share}
+                          onChange={(e) => setShare(e.target.value)}
+                        ></input>
+                        <CopyToClipboard text={share}>
+                          <button>
+                            <i class="far fa-copy"></i>
+                          </button>
+                        </CopyToClipboard>
+                      </div>
+                    )}
+                  </section>
+                </div>
               </div>
-              {/* <Button children='likes' /> */}
-              <div className="icons-card">
-                <i className="far fa-bookmark"></i>
-                <i className="far fa-heart" onClick={() => likeArticle()}>
-                  <span className="number-likes">{article.likes}</span>
-                </i>
-                <section className="button-article">
-                  {shareButton === true ? (
-                    <div className="icon-article">
-                      <Button
-                        value={shareButton}
-                        onClick={setIsShareButton}
-                        className="icon-article"
-                      >
-                        {" "}
-                        <i class="fas fa-share-alt"></i>
-                      </Button>
-                    </div>
-                  ) : (
-                    <div className="input-group s">
-                      <input
-                        type="text"
-                        value={share}
-                        onChange={(e) => setShare(e.target.value)}
-                      ></input>
-                      <CopyToClipboard text={share}>
-                        <button>
-                          <i class="far fa-copy"></i>
-                        </button>
-                      </CopyToClipboard>
-                    </div>
-                  )}
-                </section>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
 
-      <Navbar />
-    </div>
+        <Navbar />
+      </div>
+    </>
   );
 };
-
-
 
 export default Article;

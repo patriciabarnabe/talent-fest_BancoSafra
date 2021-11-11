@@ -1,18 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
-import { collection, doc, query, where, getDocs } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../../services/firebase.js'
 import Header from "../../components/Header/Header.js";
 import "./home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { CarouselData } from "../../components/Carousel/CarouselData";
-// import FlipCard from "../../components/FlipCard/FlipCard";
-import { ProgressBar } from "react-bootstrap";
+
+import ResponsiveAlert from "./../../components/ResponsiveAlert/ResponsiveAlert";
 import Carousel from "../../components/Carousel/Carousel";
 import Navbar from "../../components/Navbar/Navbar"
 import profile from '../../assets/foto-perfil.png'
-
+import stars from "./../../assets/stars.png";
 
 function Home() {
   const percentage = 73;
@@ -28,16 +26,13 @@ function Home() {
     getArticles()  
   }, [])
 
-  //   useEffect(() => {
-  //   console.log(articles)
-  // }, [articles])
-
   function clicou(e) {
     console.log('clicou', e)
   }
 
   return (
     <>
+    <ResponsiveAlert />
     <Header />
     <div className="conteiner-home">
       <section className='home-profile'>
@@ -46,19 +41,14 @@ function Home() {
           alt="user-home"
         />
         <div className='home-userInfo'>
-          <h2 className='home-userName'>Olá, {null}</h2>
-
-          <ProgressBar
-            now={percentage}
-            label={`${percentage}% `}
-            className="m-5"
-          />
+          <h2 className='home-userName'>Olá, Maria!</h2>
+          <img src={stars} alt="Imagem de estrelas" className="profile-stars" />
         </div>
       </section>
 
       <div className='home-content'>
         <section className='section-carousel'>
-          <h2 className='title-sugestion-home'> Não vacile, há  <Link className='link-contents' to="/contents">Thilhas para concluir!</Link></h2>
+          <h2 className='title-sugestion-home'> Não vacile, há  Thilhas para concluir!</h2>
           {articles != [] && <Carousel docArticle={articles} 
           cardClicked={clicou}
           />}
@@ -66,21 +56,21 @@ function Home() {
 
         </section>
         <section className='section-carousel'>
-          <h2 className='title-sugestion-home'> Vamos juntas concluir as  <Link className='link-contents' to="/contents">Leituras em Andamento...</Link></h2>
+          <h2 className='title-sugestion-home'> Vamos juntas concluir as  Leituras em Andamento...</h2>
           {articles != [] && <Carousel docArticle={articles} 
           cardClicked={clicou}
           />}
 
         </section>
         <section className='section-carousel'>
-          <h2 className='title-sugestion-home'> Para prosperar, <Link className='link-contents' to="/contents">Recomendados para você ;)</Link></h2>
+          <h2 className='title-sugestion-home'> Para prosperar, Recomendados para você ;)</h2>
           {articles != [] && <Carousel docArticle={articles} 
           cardClicked={clicou}
           />}
 
         </section>
         <section className='section-carousel-home'>
-          <h2 className='title-sugestion-home'> Você vai transformar o mundo, então  <Link className='link-contents' to="/contents">Descubra novos conteúdos!</Link></h2>
+          <h2 className='title-sugestion-home'> Você vai transformar o mundo, então  Descubra novos conteúdos!</h2>
           {articles != [] && <Carousel docArticle={articles} 
           cardClicked={clicou}
           />}
@@ -94,22 +84,3 @@ function Home() {
 }
 
 export default Home;
-
-/*{trilha && trilha.map((article) => {
-  return (
-    <Carousel
-      onClick={clicou}
-    >
-      <Card article={article}/>
-    </Carousel>
-  )
-})}*/
-
-// const q = query(collection(db, "trilha"), where("titulo", "==", true));
-
-//     const querySnapshot = await getDocs(q);
-
-//     querySnapshot.forEach((doc) => {
-//       // doc.data() is never undefined for query doc snapshots
-//       console.log(doc.id, " => ", doc.data());
-//     });
