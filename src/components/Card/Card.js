@@ -30,6 +30,7 @@ const Card = ({trilha, onClick}) => {
                         </section>
                         <img className='image-card'
                             src={article.imagem}
+                            alt="card"
                         />
                         <h3 className='category-card'>{article.categoria}</h3>
 
