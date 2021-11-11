@@ -6,7 +6,7 @@ import Header from '../../components/Header/Header';
 import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/button.js';
 import CarouselArticle from "../../components/Carousel/CarouselArticle";
-import CopyToClipboard from 'react-copy-to-clipboard';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Article = () => {
   const [trilha, setTrilha] = useState([])
@@ -44,8 +44,6 @@ const Article = () => {
       return addLike
     })
   }
-
-
 
   return (
 
