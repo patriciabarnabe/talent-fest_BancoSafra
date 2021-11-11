@@ -143,7 +143,7 @@ const About = () => {
         }
       </section>
       <Link to='/login'>
-        <Button className='class-button to-login'>Fazer parte da comunidade</Button>
+        <Button className="class-button to-login">Fazer parte da comunidade</Button>
       </Link>
 
     </div>
