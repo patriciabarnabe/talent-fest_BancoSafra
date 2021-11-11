@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import { collection, doc, query, where, getDocs } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../../services/firebase.js'
 import Header from "../../components/Header/Header.js";
 import "./home.css";
@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ProgressBar } from "react-bootstrap";
 import Carousel from "../../components/Carousel/Carousel";
 import Navbar from "../../components/Navbar/Navbar"
-import Card from '../../components/Card/Card'
+
 
 function Home() {
   const percentage = 73;
