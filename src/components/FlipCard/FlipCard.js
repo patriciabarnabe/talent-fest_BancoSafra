@@ -14,7 +14,8 @@ function FlipCard({trilha, onClick}) {
   }
   const article = trilha;
   return (
-    <div className="flip-card-outer" onClick={() => onClick(article.id)}>
+    <div className="flip-card-outer" onClick={handleClick}>
+    {/* {() => onClick(article.id)} */}
       <div className={cn("flip-card-inner", { showBack })}>
         <div className="card front">
           <div className="card-body d-flex justify-content-center align-items-center">
@@ -22,10 +23,10 @@ function FlipCard({trilha, onClick}) {
             <img className="image-card" src={article.imagem} alt='img'/>
               <h2 className="title-card">{article.titulo}</h2>
               <div className="icons-card">
-                <i className="far fa-bookmark"></i>
+                {/* <i className="far fa-bookmark"></i>
                 <i className="far fa-heart">
                   <span className="number-likes">{article.likes}</span>
-                </i>
+                </i> */}
               </div>
             </section>
           </div>

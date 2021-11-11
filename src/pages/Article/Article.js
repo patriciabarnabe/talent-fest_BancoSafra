@@ -6,6 +6,7 @@ import Header from '../../components/Header/Header';
 import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/button.js';
 import CarouselArticle from "../../components/Carousel/CarouselArticle";
+import './article.css'
 
 const Article = () => {
     const [trilha, setTrilha] = useState([])
@@ -48,18 +49,16 @@ const Article = () => {
         
         <div>
             <Header />
-
-            <h1>Oi</h1>
         
              { trilha && trilha.map((article, index) => {
                  console.log(article)
                 return (
                     <div key={index}>
-                        <div>
-                            <div>{article.titulo}</div>
-                            <div>{article.autora}</div>
+                        <section className='title-article'>
+                            <h2>{article.titulo}</h2>
+                            <h5>{article.autora}</h5>
                             <CarouselArticle arrayConteudoSlides={article} />
-                        </div>
+                        </section>
                         <Button  children='likes' onClick={() => likeArticle()}/>
                         <div className='icons-card'>
                             <i className="far fa-bookmark"></i>
