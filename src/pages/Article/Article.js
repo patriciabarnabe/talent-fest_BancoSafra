@@ -91,9 +91,9 @@ const Article = () => {
                         onChange={(e) => setShare(e.target.value)}
                       ></input>
                       <CopyToClipboard text={share}>
-                        <button>
-                          <i class="far fa-copy"></i>
-                        </button>
+                     
+                        <i class="far fa-copy"></i>
+                        
                       </CopyToClipboard>
                     </div>
                   )}
