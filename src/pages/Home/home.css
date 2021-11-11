@@ -78,3 +78,9 @@
 .section-carousel-home{
     height: 515px;
 }
+.container-article{
+    background: var(--light-blue);
+    color: var(--dark-blue);
+    height: 10rem;
+    width: 10rem;
+}
