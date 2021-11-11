@@ -10,7 +10,7 @@ import Login from "../pages/Login/Login";
 import Profile from "../pages/Profile/Profile";
 import Contents from "../pages/Contents/Contents";
 import About from "../pages/About/About";
-import Trail from "../pages/Trail/trail";
+// import Trail from "../pages/Trail/trail";
 
 export const Rotas = () => {
   return (
@@ -23,7 +23,7 @@ export const Rotas = () => {
       <Route path="/contents" element={<Contents />} />
       <Route path="/" element={<About />} />
 
-      <Route path="/trail/:id" element={<Trail />} />
+      {/* <Route path="/trail/:id" element={<Trail />} /> */}
     </Routes>
   );
 };

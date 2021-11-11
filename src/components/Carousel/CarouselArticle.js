@@ -31,9 +31,6 @@ const CarouselArticle = ({ arrayConteudoSlides }) => {
           {arrayConteudoSlides.conteudo.map((item, index) => (
             <>
               <CardArticle article={item} />
-              <p>
-                
-              </p>
             </>
           ))}
           {[arrayConteudoSlides.length - 1]

@@ -7,11 +7,13 @@ import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/button.js';
 import CarouselArticle from "../../components/Carousel/CarouselArticle";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { useParams } from 'react-router-dom';
 
 const Article = () => {
   const [trilha, setTrilha] = useState([])
   const [share, setShare] = useState('Conheça nossa pagina');
   const [shareButton, setIsShareButton] = useState(true)
+  const { id } = useParams()
 
   useEffect(() => {
     onSnapshot(doc(db, 'trilha', "1"), (doc) => {
@@ -50,7 +52,7 @@ const Article = () => {
     <div>
       <Header />
 
-      <h1>Oi</h1>
+      <h1>Article: {id} </h1>
 
       {trilha && trilha.map((article, index) => {
         console.log(article)
@@ -66,7 +68,7 @@ const Article = () => {
               <i className="far fa-bookmark"></i>
               <i className="far fa-heart"><span className="number-likes">{article.likes}</span></i>
             </div>
-
+            
           </div>
         )
       })}
