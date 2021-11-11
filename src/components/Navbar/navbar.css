@@ -1,23 +1,27 @@
 .navbar-menu {
-    background: #F54868;
-    display: flex;
-    padding: 10px 20px;
-    height: 70px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-    bottom: 0;
-    left: 0;
-    position: fixed;    
+  background: #f54868;
+  display: flex;
+  padding: 10px 20px;
+  height: 70px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 0;
+  left: 0;
+  position: fixed;
 }
 
-.fa-home, .fa-book-open, .fa-star, .fa-user {
-    font-size: 25px;
-} 
+.fa-home,
+.fa-book-open,
+.fa-star,
+.fa-user,
+.fa-sign-out-alt {
+  font-size: 25px;
+}
 
 .link {
-    color: rgb(2, 2, 2);
-  }
-  .link:active {
-     color: #FFF;
-  }
+  color: rgb(2, 2, 2);
+}
+.link:active {
+  color: #fff;
+}

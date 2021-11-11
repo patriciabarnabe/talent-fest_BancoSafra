@@ -42,6 +42,7 @@ function Home() {
       <section className='home-profile'>
         <img className='image-user-home'
           src='https://cdn.icon-icons.com/icons2/1560/PNG/512/3430602-avatar-female-pretty-profile-user-woman_107555.png'
+          alt="user-home"
         />
         <div className='home-userInfo'>
           <h2 className='home-userName'>Olá, {null}</h2>
