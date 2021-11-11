@@ -4,6 +4,7 @@
 
 <div align="center">
   <img align="center" alt="resultado7" height="580" width="400" src="./src/assets/resultado-safra.gif">
+  <img align="center" alt="resultado7" height="580" width="400" src="./src/assets/gif3-safra.gif">
 </div>
 
 ## Índice
