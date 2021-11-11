@@ -2,7 +2,7 @@ import React, {useEffect, useState}from "react";
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../../services/firebase.js'
 import Header from "../../components/Header/Header";
-import Card from "../../components/Card/Card";
+import ResponsiveAlert from "./../../components/ResponsiveAlert/ResponsiveAlert";
 
 import { Link } from "react-router-dom";
 
@@ -20,9 +20,9 @@ function Contents() {
     }
     getArticles()  
   }, [])
-  console.log(articles);
   return (
     <>
+      <ResponsiveAlert />
       <Header />
 
       <div className="button-container">
@@ -47,17 +47,7 @@ function Contents() {
           <Link to={"/article/"+index}>{item.titulo}</Link>)
         })
       }
-      {/* <Card trilha={articles} /> */}
-{/* 
-      <article>
-        <p>imagem</p>
-        <Card trilha={articles}/>
-        <p>Titulo - Por onde começar: Estudar e estudar </p>
-        <p>
-          Descrição: Sim, não tem segredo, tudo na nossa vida vai exigir
-          esforços e estudar é aquela famosa receita para o sucesso
-        </p>
-      </article> */}
+
     </>
   );
 }

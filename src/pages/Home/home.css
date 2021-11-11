@@ -15,6 +15,7 @@
     margin-top: 15px;
     display: flex;
     justify-content:space-between;
+    height: 5rem;
 }
 
 .image-user-home {
@@ -56,7 +57,9 @@
 
 .link-contents {
     text-decoration: none;
-    color: #54C5D9;     
+    color: #54C5D9;   
+    font-weight: 600;  
+    margin:0.5rem;
 }
 
 .link-contents:active {       

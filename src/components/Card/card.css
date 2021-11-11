@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 .container-card {
-  /*width: 100vw;*/
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 35px;
@@ -54,8 +53,6 @@
 }
 
 .title-card {
-  /*margin: 0;
-    padding: 0;*/
   font-size: 18pt;
   font-weight: bold;
   color: #fff;

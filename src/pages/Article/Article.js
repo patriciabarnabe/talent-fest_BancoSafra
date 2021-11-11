@@ -8,6 +8,7 @@ import Button from "../../components/Button/button.js";
 import CarouselArticle from "../../components/Carousel/CarouselArticle";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { useParams } from "react-router-dom";
+import ResponsiveAlert from "./../../components/ResponsiveAlert/ResponsiveAlert";
 import "./article.css";
 
 const Article = () => {
@@ -39,7 +40,6 @@ const Article = () => {
         likes: docTrilha.data().likes,
       };
       const addLike = (obj.likes += 1);
-      console.log(addLike);
       updateDoc(trilhas, {
         likes: addLike,
       });
@@ -48,10 +48,11 @@ const Article = () => {
   };
 
   return (
-    <div>
-      <Header />
+    <>
+      <ResponsiveAlert />
 
-      <h1>Article: {id} </h1>
+      <div>
+        <Header />
 
       {trilha &&
         trilha.map((article, index) => {
@@ -98,16 +99,15 @@ const Article = () => {
                     </div>
                   )}
                 </section>
-              </div>
-            </div>
-          );
-        })}
 
-      <Navbar />
-    </div>
+              </div>
+            );
+          })}
+
+        <Navbar />
+      </div>
+    </>
   );
 };
-
-
 
 export default Article;

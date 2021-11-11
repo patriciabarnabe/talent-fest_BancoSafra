@@ -1,10 +1,10 @@
-<h1 align="center"> Menina de Vila :girl: - Banco Safra </h1>
-
-<div align="center">
-  <img alt="logo" height="150" width="120" src="./src/assets/logo-safra.png">
-</div>
+<h1 align="center"> Menina de Vila - Banco Safra </h1>
 
 <h2 align="center"> Projeto Final desenvolvido no hackathon do Talent Fest durante o bootcamp de Front-End da SAP006 Laboratoria :yellow_heart: </h2>
+
+<div align="center">
+  <img align="center" alt="resultado7" height="580" width="400" src="./src/assets/resultado-safra.gif">
+</div>
 
 ## Índice
 
@@ -50,9 +50,7 @@ O Projeto “**Menina de Vila – O Portal de Educação Financeira e Investimen
 ---
 
 ### Protótipo de Baixa Fidalidade
-<div align="center" style="display: flex">
-  <img alt="prototipo1" height="580" width="410" src="./src/assets/prototipo_baixa.jpeg">
-</div>
+![img](./src/assets/prototipo_baixa.jpeg)
 
 ### Protótipo de Alta Fidelidade
 <div align="center" style="display: flex">
@@ -127,10 +125,13 @@ O Projeto “**Menina de Vila – O Portal de Educação Financeira e Investimen
 ## ✔️ Resultados
 
 <div style="display: flex" align="center">
-  <img align="center" alt="resultado-gif1" height="600" width="800" src="./src/img/gif-cadastro.gif"><br><br>
-  <img align="center" alt="resultado-gif2" height="600" width="800" src="./src/img/gif-carrinho.gif"><br><br>
-  <img align="center" alt="resultado-gif3" height="600" width="800" src="./src/img/gif-pedidos.gif"><br><br>
-  <img align="center" alt="resultado-gif4" height="600" width="800" src="./src/img/gif-status.gif">
+  <img align="center" alt="resultado1" height="580" width="300" src="./src/assets/result-tela-inicial.png">
+  <img align="center" alt="resultado8" height="580" width="300" src="./src/assets/result-sobre.png">
+  <img align="center" alt="resultado2" height="580" width="300" src="./src/assets/result-login.png"><br><br>
+  <img align="center" alt="resultado3" height="580" width="300" src="./src/assets/result-login1.png">
+  <img align="center" alt="resultado4" height="580" width="300" src="./src/assets/result-login2.png">
+  <img align="center" alt="resultado5" height="580" width="300" src="./src/assets/result-home.png"><br><br>
+  <img align="center" alt="resultado6" height="580" width="300" src="./src/assets/result-home1.png">
 </div>
 
 ---
