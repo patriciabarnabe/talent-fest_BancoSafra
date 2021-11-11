@@ -26,13 +26,13 @@ function Contents() {
       <Header />
 
       <div className="button-container">
-        <Link to="/article">
+        <Link to="/contents">
           <button type="button" className="button-article">
             Artigos
           </button>
         </Link>
 
-        <Link to="/about">
+        <Link to="/">
           <button type="button" className="button-about">
             Sobre
           </button>
@@ -44,7 +44,7 @@ function Contents() {
       {
         articles.map((item, index)=>{
           return(
-          <Link to={"/trail/"+index}>{item.titulo}</Link>)
+          <Link to={"/article/"+index}>{item.titulo}</Link>)
         })
       }
       {/* <Card trilha={articles} /> */}

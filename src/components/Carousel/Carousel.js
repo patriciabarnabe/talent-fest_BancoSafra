@@ -56,9 +56,10 @@ const Carousel = ({docArticle, cardClicked}) => {
         onClick={handleLeftClick}
       />
       <div className='carousel' ref={carousel}>
-        {cards != [] && cards?.map((card, index) => {
+        {cards != [] && cards?.map((card) => {
+          console.log(card.id)
           return (
-            <FlipCard key={index} trilha={card} 
+            <FlipCard key={card.id} trilha={card} 
             onClick={cardClicked}
             />
           )

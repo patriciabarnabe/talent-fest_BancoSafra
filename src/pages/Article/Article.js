@@ -1,20 +1,23 @@
-import React from 'react';
+import React from "react";
 import { useState, useEffect } from "react";
-import { onSnapshot, getDoc, doc, updateDoc } from 'firebase/firestore'
-import { db } from '../../services/firebase.js'
-import Header from '../../components/Header/Header';
-import Navbar from '../../components/Navbar/Navbar';
-import Button from '../../components/Button/button.js';
+import { onSnapshot, getDoc, doc, updateDoc } from "firebase/firestore";
+import { db } from "../../services/firebase.js";
+import Header from "../../components/Header/Header";
+import Navbar from "../../components/Navbar/Navbar";
+import Button from "../../components/Button/button.js";
 import CarouselArticle from "../../components/Carousel/CarouselArticle";
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { useParams } from "react-router-dom";
+import "./article.css";
 
 const Article = () => {
-  const [trilha, setTrilha] = useState([])
-  const [share, setShare] = useState('Conheça nossa pagina');
-  const [shareButton, setIsShareButton] = useState(true)
+  const [trilha, setTrilha] = useState([]);
+  const [share, setShare] = useState("Conheça nossa pagina");
+  const [shareButton, setIsShareButton] = useState(true);
+  const { id } = useParams();
 
   useEffect(() => {
-    onSnapshot(doc(db, 'trilha', "1"), (doc) => {
+    onSnapshot(doc(db, "trilha", id), (doc) => {
       const newArray = [];
       const obj = {
         titulo: doc.data().titulo,
@@ -24,65 +27,86 @@ const Article = () => {
         likes: doc.data().likes,
       };
       newArray.push(obj);
-      setTrilha(newArray)
-    })
-  }, [])
-
+      setTrilha(newArray);
+    });
+  }, []);
 
   const likeArticle = async () => {
-    const trilhas = doc(db, "trilha", "1");
-    const esperandoGetDocs = getDoc(trilhas)
+    const trilhas = doc(db, "trilha", id);
+    const esperandoGetDocs = getDoc(trilhas);
     esperandoGetDocs.then((docTrilha) => {
       const obj = {
-        likes: docTrilha.data().likes
+        likes: docTrilha.data().likes,
       };
-      const addLike = obj.likes += 1
-      console.log(addLike)
+      const addLike = (obj.likes += 1);
+      console.log(addLike);
       updateDoc(trilhas, {
-        likes: addLike
+        likes: addLike,
       });
-      return addLike
-    })
-  }
+      return addLike;
+    });
+  };
 
   return (
-
     <div>
       <Header />
 
-      <h1>Oi</h1>
+      <h1>Article: {id} </h1>
 
-      {trilha && trilha.map((article, index) => {
-        console.log(article)
-        return (
-          <div key={index}>
-            <div>
-              <div>{article.titulo}</div>
-              <div>{article.autora}</div>
-              <CarouselArticle arrayConteudoSlides={article} />
+      {trilha &&
+        trilha.map((article, index) => {
+          console.log(article);
+          return (
+            <div key={index} className="article">
+              <div className="article-page">
+                <section className="title-article">
+                  <h2>{article.titulo}</h2>
+                  <h5>{article.autora}</h5>
+                </section>
+                <CarouselArticle arrayConteudoSlides={article} />
+              </div>
+              {/* <Button children='likes' /> */}
+              <div className="icons-card">
+                <i className="far fa-bookmark"></i>
+                <i className="far fa-heart" onClick={() => likeArticle()}>
+                  <span className="number-likes">{article.likes}</span>
+                </i>
+                <section className="button-article">
+                  {shareButton === true ? (
+                    <div className="icon-article">
+                      <Button
+                        value={shareButton}
+                        onClick={setIsShareButton}
+                        className="icon-article"
+                      >
+                        {" "}
+                        <i class="fas fa-share-alt"></i>
+                      </Button>
+                    </div>
+                  ) : (
+                    <div className="input-group s">
+                      <input
+                        type="text"
+                        value={share}
+                        onChange={(e) => setShare(e.target.value)}
+                      ></input>
+                      <CopyToClipboard text={share}>
+                        <button>
+                          <i class="far fa-copy"></i>
+                        </button>
+                      </CopyToClipboard>
+                    </div>
+                  )}
+                </section>
+              </div>
             </div>
-            <Button children='likes' onClick={() => likeArticle()} />
-            <div className='icons-card'>
-              <i className="far fa-bookmark"></i>
-              <i className="far fa-heart"><span className="number-likes">{article.likes}</span></i>
-            </div>
+          );
+        })}
 
-          </div>
-        )
-      })}
-      {shareButton === true ? (<div className='icon-article'><Button value={shareButton} onClick={setIsShareButton} className='icon-article'> <i class="fas fa-share-alt"></i></Button></div>
-      ):
-        <div className='input-group s'>
-          <input type='text' value={share} onChange={e => setShare(e.target.value)}></input>
-          <CopyToClipboard text={share}>
-            <button><i class="far fa-copy"></i></button>
-          </CopyToClipboard>
-        </div>
-      }
       <Navbar />
     </div>
-  )
-}
+  );
+};
 
 
 

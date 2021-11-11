@@ -16,14 +16,14 @@ export const Rotas = () => {
   return (
     <Routes>
       <Route path="/home" element={<Home />} />
-      <Route path="/article" element={<Article />} />
+      <Route path="/article/:id/" element={<Article />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/contents" element={<Contents />} />
       <Route path="/" element={<About />} />
 
-      <Route path="/trail/:id" element={<Trail />} />
+      <Route path="/trail/:id" element={<Trail />} /> 
     </Routes>
   );
 };
