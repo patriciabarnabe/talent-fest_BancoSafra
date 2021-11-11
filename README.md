@@ -1,4 +1,4 @@
-<h1 align="center"> Menina de Vila :girl: - Banco Safra </h1>
+<h1 align="center"> Menina de Vila - Banco Safra </h1>
 
 <h2 align="center"> Projeto Final desenvolvido no hackathon do Talent Fest durante o bootcamp de Front-End da SAP006 Laboratoria :yellow_heart: </h2>
 
