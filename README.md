@@ -88,56 +88,38 @@ O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimento
 ├── 📁public
 |
 ├── 📁src
+|   ├── 📁assets
+|   |
 |   ├── 📁components
-|   |   ├── 📁All-day
-|   |   ├── 📁Breakfast
-|   |   ├── 📁ButtonDefault
-|   |   ├── 📁ButtonImg
-|   |   ├── 📁ButtonRadio
-|   |   ├── 📁ButtonSelect
-|   |   ├── 📁CarArea
-|   |   ├── 📁CartItem
-|   |   ├── 📁DateTime
-|   |   ├── 📁ErrorMessage
+|   |   ├── 📁Button
+|   |   ├── 📁Card
+|   |   ├── 📁Carousel
+|   |   ├── 📁FlipCard
 |   |   ├── 📁Header
 |   |   ├── 📁Input
-|   |   ├── 📁LinkAside
-|   |   ├── 📁ListAllOrders
-|   |   ├── 📁Loader
-|   |   ├── 📁NotFound
-|   |   ├── 📁Popup
-|   |   ├── 📁PopupCancel
-|   |   └── 📁ProductArea
-|   |
-|   ├── 📁img
+|   |   ├── 📁Mdal
+|   |   └── 📁Navbar 
 |   |
 |   ├── 📁pages
-|   |   ├── 📁Hall
+|   |   ├── 📁About
+|   |   ├── 📁Article
+|   |   ├── 📁Contents
+|   |   ├── 📁Home
 |   |   ├── 📁Login
-|   |   ├── 📁OrdersPanel
-|   |   └── 📁Register
+|   |   ├── 📁Notfound
+|   |   └── 📁Profile
 |   |
-|   ├── 📁services
-|   |   
-|   ├── 📁utils
+|   ├── 📁routes
+|   |
+|   ├── 📁services 
 |   |
 |   ├── 📄global.scss
-|   ├── 📄index.js
-|   └── 📄routes.js
+|   └── 📄index.js
 |   
 ├── 📄README.md
 └── 📄package.json
 
 ```
-
-## :bar_chart: Performance, Progressive Web App, Accessibility e Best Practices do Lighthouse
-A aplicação superou a meta de 80% de pontuação do [Lighthouse](https://web.dev/) e o relatório completo pode ser visto [aqui](https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fdivino-burger.vercel.app%2F#performance).
-
-<div align="center" >
-  <img alt="light-house-perfomance" src="./src/img/light-house-perfomance.png">
-</div>
-
----
 
 ## ✔️ Resultados
 
