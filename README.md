@@ -19,7 +19,7 @@
 
 ---
 ## :dart: A Ideia
-O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimentos. Criado por, e para, Mulheres” tem como principal objetivo, simplificar a linguagem do mercado financeiro e levar conteúdo de educação financeira para as meninas que não possuem acesso as informações na linguagem da periferia.
+O Projeto “**Menina de Vila – O Portal de Educação Financeira e Investimentos. Criado por, e para, Mulheres**” tem como principal objetivo, simplificar a linguagem do mercado financeiro e levar conteúdo de educação financeira para as meninas que não possuem acesso as informações na linguagem da periferia.
 
 <div align="center" style="display: flex">
     <img alt="logo" height="150" width="150" style="margin: 50rem" src="./src/assets/logo-g-menina-de-vila.png">
