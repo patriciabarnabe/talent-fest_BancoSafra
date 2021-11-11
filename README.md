@@ -11,14 +11,11 @@
 1. [A Ideia](#dart-a-ideia)
 2. [Desafio](#on-desafio)
 3. [Objetivos Principais](#pencil2-objetivos-principais)
-4. [UX/UI Design](#art-ux/ui-design)
-5. [Como Utilizar](#gear-como-utilizar)
-6. [Testes de Usabilidade](#busts_in_silhouette-testes-de-usabilidade)
-7. [Tecnologias Utilizadas](#robot-tecnologias-utilizadas)
-8. [Estrutura dos Principais Arquivos](#file_folder-estrutura-dos-principais-arquivos)
-9. [Performance, Progressive Web App, Accessibility e Best Practices do Lighthouse](#bar_chart-performance-progressive-web-app-accessibility-e-best-practices-do-lighthouse)
-10. [Resultados](#%EF%B8%8F-resultados)
-11. [Sobre as desenvolvedoras](#woman_technologist-sobre-as-desenvolvedoras)
+4. [UX/UI Design](#art-uxui-design)
+5. [Tecnologias Utilizadas](#robot-tecnologias-utilizadas)
+6. [Estrutura dos Principais Arquivos](#file_folder-estrutura-dos-principais-arquivos)
+7. [Resultados](#%EF%B8%8F-resultados)
+8. [Sobre as desenvolvedoras](#woman_technologist-sobre-as-desenvolvedoras)
 
 ---
 ## :dart: A Ideia
@@ -159,7 +156,6 @@ A aplicação superou a meta de 80% de pontuação do [Lighthouse](https://web.d
 
 ## ✔️ Resultados
 
-* #### Tablet
 <div style="display: flex" align="center">
   <img align="center" alt="gif-cadastro" height="600" width="800" src="./src/img/gif-cadastro.gif"><br><br>
   <img align="center" alt="gif-carrinho" height="600" width="800" src="./src/img/gif-carrinho.gif"><br><br>
@@ -167,18 +163,19 @@ A aplicação superou a meta de 80% de pontuação do [Lighthouse](https://web.d
   <img align="center" alt="gif-status" height="600" width="800" src="./src/img/gif-status.gif">
 </div>
 
-* #### Responsivo
-![img](./src/img/gif-responsivo.gif)
-
 ---
+
 ## :woman_technologist: Sobre as desenvolvedoras
 
-### Karen Freitas
+* ### [Carmen Gozza](https://www.linkedin.com/in/carmen-emilia-gozza/)
 
-- [LinkedIn](https://www.linkedin.com/in/karen-freitas/)
-- E-mail: karenfcorrea@gmail.com
-### Patrícia Barnabé
+* ### [Jennifer Pessoa](https://www.linkedin.com/in/jennifer-pessoa/)
 
-- [LinkedIn](https://www.linkedin.com/in/patriciabarnabe)
-- E-mail: patbarnabe5@gmail.com
+* ### [Jéssica Inamassu](https://www.linkedin.com/in/jessica-inamassu/)
+
+* ### [Joice Souza](https://www.linkedin.com/in/joicesouza-/)
+
+* ### [Juliete Andrade](https://www.linkedin.com/in/juliete-andrade-1990/)
+
+* ### [Patrícia Barnabé](https://www.linkedin.com/in/patriciabarnabe)
 
