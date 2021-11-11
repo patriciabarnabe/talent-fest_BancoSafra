@@ -6,16 +6,18 @@ import Header from '../../components/Header/Header';
 import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/button.js';
 import CarouselArticle from "../../components/Carousel/CarouselArticle";
-import CopyToClipboard from 'react-copy-to-clipboard';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { useParams } from 'react-router-dom';
 import './article.css'
 
 const Article = () => {
   const [trilha, setTrilha] = useState([])
   const [share, setShare] = useState('Conheça nossa pagina');
   const [shareButton, setIsShareButton] = useState(true)
+  const { id } = useParams()
 
   useEffect(() => {
-    onSnapshot(doc(db, 'trilha', "1"), (doc) => {
+    onSnapshot(doc(db, 'trilha', id), (doc) => {
       const newArray = [];
       const obj = {
         titulo: doc.data().titulo,
@@ -31,7 +33,7 @@ const Article = () => {
 
 
   const likeArticle = async () => {
-    const trilhas = doc(db, "trilha", "1");
+    const trilhas = doc(db, "trilha", id);
     const esperandoGetDocs = getDoc(trilhas)
     esperandoGetDocs.then((docTrilha) => {
       const obj = {
@@ -46,12 +48,12 @@ const Article = () => {
     })
   }
 
-
-
   return (
 
     <div >
       <Header />
+
+      <h1>Article: { id } </h1>
 
       {trilha && trilha.map((article, index) => {
         console.log(article)
@@ -70,7 +72,7 @@ const Article = () => {
               <i className="far fa-bookmark"></i>
               <i className="far fa-heart"><span className="number-likes">{article.likes}</span></i>
             </div>
-
+            
           </div>
         )
       })}
