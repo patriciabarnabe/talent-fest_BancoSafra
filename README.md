@@ -51,15 +51,19 @@ O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimento
 
 ### Protótipo de Baixa Fidalidade
 <div align="center" style="display: flex">
-  <img alt="prototipo1" height="580" width="410" src="./src/img/prototipo-login2.png">
+  <img alt="prototipo1" height="580" width="410" src="./src/assets/prototipo_baixa.jpeg">
 </div>
 
 ### Protótipo de Alta Fidelidade
 <div align="center" style="display: flex">
-  <img alt="prototipo1" height="580" width="410" src="./src/img/prototipo-login2.png">
-  <img alt="prototipo2" height="580" width="410" src="./src/img/prototipo-salao3.png"><br><br>
-  
-  <img alt="prototipo-salao" height="600" width="750" src="./src/img/prototipo-salao.png">
+  <img alt="prototipo1" height="580" width="350" src="./src/assets/prototipo-alta1.png">
+  <img alt="prototipo2" height="580" width="350" src="./src/assets/prototipo-alta2.png"><br><br>
+  <img alt="prototipo3" height="580" width="350" src="./src/assets/prototipo-alta3.png">
+  <img alt="prototipo4" height="580" width="350" src="./src/assets/prototipo-alta4.png"><br><br>
+  <img alt="prototipo5" height="580" width="230" src="./src/assets/prototipo-alta5.png">
+  <img alt="prototipo6" height="580" width="230" src="./src/assets/prototipo-alta6.png">
+  <img alt="prototipo7" height="580" width="230" src="./src/assets/prototipo-alta7.png">
+  <img alt="prototipo8" height="580" width="230" src="./src/assets/prototipo-alta8.png"><br><br>
 </div>
 
 ---
