@@ -63,34 +63,15 @@ O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimento
 </div>
 
 ---
-## :gear: Como Utilizar
 
-- A tela inicial da aplicação traz a **Página de Login** que apresenta ao usário as opções de fazer o login com email e senha já cadastrados e entrar na plataforma do Divino Burger ou prosseguir para a Página de Cadastro;
-- Na **Página de Cadastro**, o funcionário pode cadastrar-se inserindo seus dados de Nome, E-mail, Senha e Setor de Trabalho;
-- Ao realizar qualquer uma dessas formas de acesso, o usuário será encaminhado para o seu respectivo ambiente:
-    1. **Salão**: para os garçons/garçonetes, onde ocorrerá a anotação e encaminhamento dos pedidos para a cozinha;
-    2. **Cozinha**: para os cozinheiros que receberão a demanda dos pedidos realizados.
-
----
-## :busts_in_silhouette: Testes de Usabilidade
-Durante o desenvolvimento do projeto, foram realizados testes de usabilidade com diferentes indivíduos no intuito de analisar a experiência do usuário com a interface da aplicação. Com base nos resultados desses testes, foram implementadas as seguintes soluções:
-
-- Tempo de preparação exibido somente na área de pedidos entregues;
-- Relógio digital;
-- Responsividade para tablet em formato retrato, adaptando a exibição do carrinho na página de Salão;
-- Histórico com filtragem de pedidos do dia atual;
-- Atualização automática dos pedidos;
-
----
 ## :robot: Tecnologias Utilizadas
 
 | Ferramenta | Descrição |
 | --- | --- |
 | `React` | Uma biblioteca JavaScript para criar interfaces de usuário |
 | `HTML 5` | Linguagem de marcação |
-| `SCSS/SASS` | Linguagem de estilização |
+| `SCSS` | Linguagem de estilização |
 | `JavaScript` |  Linguagem de programação interpretada estruturada |
-| `Jest` | Framework de teste em JavaScript |
 | `Node.js` | Software de execução de códigos JavaScript |
 | `Git e GitHub` | Sistemas de controle de versões distribuídos |
 | `Figma` | Editor gráfico de vetor e prototipagem de projetos |
