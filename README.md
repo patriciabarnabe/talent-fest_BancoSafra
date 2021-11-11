@@ -74,7 +74,7 @@ O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimento
 | --- | --- |
 | `React` | Uma biblioteca JavaScript para criar interfaces de usuário |
 | `HTML 5` | Linguagem de marcação |
-| `SCSS` | Linguagem de estilização |
+| `CSS` | Linguagem de estilização |
 | `JavaScript` |  Linguagem de programação interpretada estruturada |
 | `Node.js` | Software de execução de códigos JavaScript |
 | `Git e GitHub` | Sistemas de controle de versões distribuídos |
