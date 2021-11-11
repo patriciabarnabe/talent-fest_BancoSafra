@@ -16,7 +16,7 @@ const Article = () => {
   const { id } = useParams()
 
   useEffect(() => {
-    onSnapshot(doc(db, 'trilha', "1"), (doc) => {
+    onSnapshot(doc(db, 'trilha', id), (doc) => {
       const newArray = [];
       const obj = {
         titulo: doc.data().titulo,
@@ -32,7 +32,7 @@ const Article = () => {
 
 
   const likeArticle = async () => {
-    const trilhas = doc(db, "trilha", "1");
+    const trilhas = doc(db, "trilha", id);
     const esperandoGetDocs = getDoc(trilhas)
     esperandoGetDocs.then((docTrilha) => {
       const obj = {
@@ -52,7 +52,7 @@ const Article = () => {
     <div>
       <Header />
 
-      <h1>Article: {id} </h1>
+      <h1>Article: { id } </h1>
 
       {trilha && trilha.map((article, index) => {
         console.log(article)

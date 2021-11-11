@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom';
 import { collection, getDocs, } from '@firebase/firestore';
 import { db } from '../../services/firebase';
 
-const Trail = () => {
-  
-  let idParam = Number(JSON.parse(JSON.stringify(useParams())).id);
+export default function Trail() { 
+  let { id } = useParams()
+  // let idParam = Number(JSON.parse(JSON.stringify(useParams())).id);
 
-const [trilha, setTrilha] = useState([])
+  const [trilha, setTrilha] = useState([])
 
 useEffect(() => {
   const trilhas = collection(db, 'trilha');
@@ -28,12 +28,12 @@ useEffect(() => {
 
   console.log();
   return (
-    <div>{trilha[idParam]?.conteudo.map((content) => {
+    <div>{trilha[id]?.conteudo.map((content) => {
       console.log(content);
     })}</div>
   );
   
 };
 
-export default Trail;
+
 

@@ -10,20 +10,20 @@ import Login from "../pages/Login/Login";
 import Profile from "../pages/Profile/Profile";
 import Contents from "../pages/Contents/Contents";
 import About from "../pages/About/About";
-// import Trail from "../pages/Trail/trail";
+import Trail from "../pages/Trail/Trail";
 
 export const Rotas = () => {
   return (
     <Routes>
       <Route path="/home" element={<Home />} />
-      <Route path="/article" element={<Article />} />
+      <Route path="/article/:id/" element={<Article />} />
       <Route path="*" element={<NotFound />} />
       <Route path="/login" element={<Login />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/contents" element={<Contents />} />
       <Route path="/" element={<About />} />
 
-      {/* <Route path="/trail/:id" element={<Trail />} /> */}
+      <Route path="/trail/:id" element={<Trail />} /> 
     </Routes>
   );
 };

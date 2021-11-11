@@ -21,7 +21,7 @@ const About = () => {
     const getArticles = async () => {
       const data = await getDocs(articlesCollectionRef);
       setArticles(data.docs.map((article) => ({ ...article.data(), id: article.id })))
-
+      
     }
     getArticles()
 
@@ -54,6 +54,7 @@ const About = () => {
   const [tab, setTab] = useState('article');
   const handleTab = (tabSelect) => {
     setTab(tabSelect)
+    
   }
 
   function clicou(e) {
