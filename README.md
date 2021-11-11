@@ -1,47 +1,66 @@
+<h1 align="center"> Menina de Vila :girl: - Banco Safra </h1>
+
 <div align="center">
-  <img alt="logo" height="150" width="150" style="margin: 50rem" src="./src/assets/logo-g-menina-de-vila.png">
+  <img alt="logo" height="150" width="120" src="./src/assets/logo-safra.png">
 </div>
 
 <h2 align="center"> Projeto Final desenvolvido no hackathon do Talent Fest durante o bootcamp de Front-End da SAP006 Laboratoria :yellow_heart: </h2>
 
 ## Índice
 
-1. [Definição do Produto](#dart-definição-do-produto)
-2. [Histórias de Usuários](#pencil2-histórias-de-usuários)
-3. [Protótipos](#art-protótipos)
-4. [Como Utilizar](#gear-como-utilizar)
-5. [Testes de Usabilidade](#busts_in_silhouette-testes-de-usabilidade)
-6. [Tecnologias Utilizadas](#robot-tecnologias-utilizadas)
-7. [Estrutura dos Principais Arquivos](#file_folder-estrutura-dos-principais-arquivos)
-8. [Performance, Progressive Web App, Accessibility e Best Practices do Lighthouse](#bar_chart-performance-progressive-web-app-accessibility-e-best-practices-do-lighthouse)
-9. [Resultados](#%EF%B8%8F-resultados)
-10. [Sobre as desenvolvedoras](#woman_technologist-sobre-as-desenvolvedoras)
+1. [A Ideia](#dart-a-ideia)
+2. [Desafio](#on-desafio)
+3. [Objetivos Principais](#pencil2-objetivos-principais)
+4. [UX/UI Design](#art-ux/ui-design)
+5. [Como Utilizar](#gear-como-utilizar)
+6. [Testes de Usabilidade](#busts_in_silhouette-testes-de-usabilidade)
+7. [Tecnologias Utilizadas](#robot-tecnologias-utilizadas)
+8. [Estrutura dos Principais Arquivos](#file_folder-estrutura-dos-principais-arquivos)
+9. [Performance, Progressive Web App, Accessibility e Best Practices do Lighthouse](#bar_chart-performance-progressive-web-app-accessibility-e-best-practices-do-lighthouse)
+10. [Resultados](#%EF%B8%8F-resultados)
+11. [Sobre as desenvolvedoras](#woman_technologist-sobre-as-desenvolvedoras)
 
 ---
-## :dart: Definição do Produto
+## :dart: A Ideia
 O Projeto “Menina de Vila – O Portal de Educação Financeira e Investimentos. Criado por, e para, Mulheres” tem como principal objetivo, simplificar a linguagem do mercado financeiro e levar conteúdo de educação financeira para as meninas que não possuem acesso as informações na linguagem da periferia.
 
 <div align="center" style="display: flex">
-    <img alt="logo" height="150" width="120" src="./src/assets/logo-safra.png">
+    <img alt="logo" height="150" width="150" style="margin: 50rem" src="./src/assets/logo-g-menina-de-vila.png">
 </div>
 
-
+---
+## :on: Desafio
+* Layout / Design da plataforma e dos “cards” de estudo
+* Trilha de estudo
+* Dashboard com informações sobre avanço
+* Notificações para manter o engajamento dos estudos
+* Like nos artigos e compartilhamento
 
 ---
-## :pencil2: Histórias de Usuários
-![img](./src/img/historias-usuarios.png)
+
+## :pencil2: Objetivos Principais
+* Gerar conhecimento sobre educação financeira e investimento
+* Ter uma linguagem simples
+* Atingir o publico feminino das periferias
+* Gerar engajamento nas comunidades
 
 ---
-## :art: Protótipos 
+## :art: UX/UI Design
 
 ### Paleta de Cores 
-![img](./src/img/paleta-cores.png)
+![img](./src/assets/paleta-cores.jpeg)
 
 ---
 
+### Protótipo de Baixa Fidalidade
 <div align="center" style="display: flex">
-  <img alt="prototipo-login" height="580" width="410" src="./src/img/prototipo-login2.png">
-  <img alt="prototipo-salao" height="580" width="410" src="./src/img/prototipo-salao3.png"><br><br>
+  <img alt="prototipo1" height="580" width="410" src="./src/img/prototipo-login2.png">
+</div>
+
+### Protótipo de Alta Fidelidade
+<div align="center" style="display: flex">
+  <img alt="prototipo1" height="580" width="410" src="./src/img/prototipo-login2.png">
+  <img alt="prototipo2" height="580" width="410" src="./src/img/prototipo-salao3.png"><br><br>
   
   <img alt="prototipo-salao" height="600" width="750" src="./src/img/prototipo-salao.png">
 </div>
