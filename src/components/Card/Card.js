@@ -2,13 +2,13 @@ import React from "react";
 
 import './card.css'
 
-const Card = ({trilha, onClick}) => {
+const Card = ({trilha}) => {
 
     const article = trilha
     //console.log(article, article.autora)
 
     return (
-        <article className='article' onClick={() => onClick(article.id)}>
+        <article className='article' >
             <div className="container-card">
 
                 <div className="card">
@@ -16,7 +16,6 @@ const Card = ({trilha, onClick}) => {
                         <div className="content">
                             <span className="stars"></span>
                             <h2 className="text-card">{article.autora}</h2>
-                            <p className="text-card">{article.descricao}</p>
                             <p className="text-card">{article.descricao}</p>
                         </div>
                     </div>
@@ -30,6 +29,7 @@ const Card = ({trilha, onClick}) => {
                         </section>
                         <img className='image-card'
                             src={article.imagem}
+                            alt="card"
                         />
                         <h3 className='category-card'>{article.categoria}</h3>
 

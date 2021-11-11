@@ -1,12 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import { onSnapshot, getDoc, doc, updateDoc } from 'firebase/firestore'
-import { db } from '../../Services/firebase.js'
+import { db } from '../../services/firebase.js'
 import Header from '../../components/Header/Header';
 import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/button.js';
 import CarouselArticle from "../../components/Carousel/CarouselArticle";
-import CopyToClipboard from 'react-copy-to-clipboard';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Article = () => {
   const [trilha, setTrilha] = useState([])
@@ -44,8 +44,6 @@ const Article = () => {
       return addLike
     })
   }
-
-
 
   return (
 
@@ -85,5 +83,7 @@ const Article = () => {
     </div>
   )
 }
+
+
 
 export default Article;

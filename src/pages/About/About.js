@@ -5,7 +5,7 @@ import Button from '../../components/Button/button';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
 
-import { collection, doc, query, where, getDocs } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../../services/firebase.js'
 
 import './about.css';
@@ -143,7 +143,7 @@ const About = () => {
         }
       </section>
       <Link to='/login'>
-        <Button className='class-button to-login'>Fazer parte da comunidade</Button>
+        <Button className="class-button to-login">Fazer parte da comunidade</Button>
       </Link>
 
     </div>
