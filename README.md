@@ -100,7 +100,8 @@ O Projeto “**Menina de Vila – O Portal de Educação Financeira e Investimen
 |   |   ├── 📁Header
 |   |   ├── 📁Input
 |   |   ├── 📁Modal
-|   |   └── 📁Navbar 
+|   |   ├── 📁Navbar 
+|   |   └── 📁ResponsiveAlert
 |   |
 |   ├── 📁pages
 |   |   ├── 📁About
